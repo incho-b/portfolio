@@ -1,0 +1,37 @@
+@charset 'UTF-8';
+
+/*
+            iPad Pro : 1024 * 1366
+            iPad : 768 * 1024
+            iPhone X : 375 * 812
+            iPhone 6~8 Plus : 414 * 736
+            iPhone 6~8 : 375 * 667
+            Galaxy S5 : 360 * 640
+            */
+
+/* iPad Pro */
+::-webkit-scrollbar {
+    display: none;
+}
+@media (max-width: 1024px) {
+}
+
+/* iPad */
+@media (max-width: 768px) {
+    #info {
+        max-width: 80%;
+        .info-bg {
+            .circle {
+                top: 0;
+                left: 0;
+            }
+            .info-box {
+                max-width: 80%;
+            }
+        }
+    }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+}

@@ -1,0 +1,207 @@
+/* RESET */
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+.clearfix::before,
+.clearfix::after {
+  clear: both;
+  content: '';
+  display: block;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+/* color */
+/* font-family */
+/* bold */
+/* slant */
+/* korean */
+/* background */
+body {
+  width: 100vw;
+  height: 300vh;
+  font-family: "Rubik", sans-serif, "Noto Sans KR", sans-serif;
+  color: #333;
+}
+
+#body-wrap {
+  max-width: 100vw;
+  height: 300vh;
+  background: url(../img/20grid_bg.png);
+  text-shadow: none;
+}
+
+#body-wrap .box-shadow {
+  -webkit-box-shadow: 5px 5px 10px #555;
+          box-shadow: 5px 5px 10px #555;
+}
+
+#body-wrap .liner {
+  padding: 0 5px;
+  background-color: rgba(153, 136, 221, 0.2);
+  border-right: 7px solid rgba(153, 136, 221, 0.3);
+}
+
+#body-wrap .title {
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bolder;
+  position: relative;
+}
+
+#body-wrap .title p {
+  width: 100%;
+  position: absolute;
+  left: calc(50% - 50%);
+  top: 0;
+  z-index: 1;
+}
+
+#body-wrap .underline {
+  width: 80%;
+  height: 30px;
+  background: #f5989d;
+  position: absolute;
+  left: calc(50% - 40%);
+  top: calc(100% - 15px);
+}
+
+/* #body-wrap */
+#info {
+  margin: 0 auto;
+  max-width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+#info .info-bg {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  background: url(../img/papertear_bg.png) repeat-x bottom;
+  background-size: cover;
+  z-index: 1;
+  /* .info-box */
+}
+
+#info .info-bg .info-inner {
+  margin: 0 auto;
+  width: 1200px;
+  height: 100vh;
+  position: absolute;
+  left: calc(50% - 600px);
+}
+
+#info .info-bg .circle {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: #f5989d;
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  z-index: 5;
+}
+
+#info .info-bg .circle img {
+  width: 120%;
+  position: absolute;
+  top: -40%;
+  left: -10%;
+}
+
+#info .info-bg .info-box {
+  width: 800px;
+  height: 500px;
+  background: #fff;
+  background-image: url(../img/20grid_bg.png);
+  position: absolute;
+  left: calc(60% - 400px);
+  top: calc(50% - 250px);
+  z-index: 1;
+}
+
+#info .info-bg .info-box .namebox {
+  width: 320px;
+  height: 65px;
+  line-height: 65px;
+  text-align: center;
+  position: absolute;
+  z-index: 10;
+  left: 40%;
+  top: -30px;
+  font-size: 3rem;
+  font-weight: bolder;
+  color: #fff;
+  -webkit-transform: rotate(-15deg);
+          transform: rotate(-15deg);
+  background: url(../img/name_bg.png) no-repeat bottom;
+  background-size: cover;
+}
+
+#info .info-bg .info-box .achon-face {
+  width: 150px;
+  position: absolute;
+  z-index: 10;
+  right: 20%;
+  top: 10%;
+}
+
+#info .info-bg .info-box .achon-face img {
+  width: 100%;
+}
+
+#info .info-bg .info-box .info-box-inner {
+  width: 700px;
+  height: 400px;
+  position: absolute;
+  z-index: 5;
+  background: rgba(255, 255, 255, 0.6);
+  top: calc(50% - 200px);
+  left: calc(50% - 350px);
+  padding: 80px 130px;
+  font-size: 1.5rem;
+  line-height: 2;
+  font-weight: 600;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#info .info-bg .info-box .info-box-inner p {
+  padding: 5px 10px;
+}
+
+/* #info */
+#wrap {
+  margin: 0 auto;
+  max-width: 1200px;
+  /* #skill */
+  /* #contact */
+}
+
+#wrap #skill {
+  margin: 0 auto;
+  max-width: 80%;
+  height: 100vh;
+  background-color: #fff;
+  padding-top: 50px;
+}
+
+#wrap #contact {
+  margin: 0 auto;
+  width: 1200px;
+  height: 100vh;
+}
+
+/* #wrap */
+/*# sourceMappingURL=style.css.map */
