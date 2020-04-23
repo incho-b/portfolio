@@ -48,6 +48,8 @@ body {
   padding: 5px;
   background-color: rgba(153, 136, 221, 0.2);
   border-right: 7px solid rgba(153, 136, 221, 0.3);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 #body-wrap .title {
@@ -245,13 +247,67 @@ body {
 #wrap #skill .skill-inner .skill-list .skill-sub .graph {
   width: 200px;
   height: 200px;
-  border: 25px solid #98d;
+  stroke: #98d;
   border-radius: 50%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  position: relative;
 }
 
-#wrap #skill .skill-inner .skill-list .skill-sub span {
+#wrap #skill .skill-inner .skill-list .skill-sub .graph svg {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  left: calc(50% - 50%);
+}
+
+#wrap #skill .skill-inner .skill-list .skill-sub .graph svg:nth-child(2) {
+  opacity: 0;
+  display: none;
+}
+
+#wrap #skill .skill-inner .skill-list .skill-sub .graph svg.skill-graph {
+  z-index: 1;
+  display: block;
+}
+
+#wrap #skill .skill-inner .skill-list .skill-sub .graph svg .graph-circle {
+  stroke: #f5989d;
+  stroke-width: 1;
+  fill: none;
+  stroke-linecap: round;
+}
+
+#wrap #skill .skill-inner .skill-list .skill-sub .graph.on .skill-graph .graph-circle {
+  -webkit-animation: progress 3s ease-out forwards;
+          animation: progress 3s ease-out forwards;
+}
+
+@-webkit-keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+
+#wrap #skill .skill-inner .skill-list .skill-sub .graph .per {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bolder;
+  position: absolute;
+  left: calc(50% - 50%);
+  top: calc(50% - 25px);
+}
+
+#wrap #skill .skill-inner .skill-list .skill-sub span.liner {
   position: absolute;
   width: 150px;
   font-size: 1.3rem;
