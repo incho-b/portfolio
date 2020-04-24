@@ -1,0 +1,109 @@
+/* #skill */
+#skill {
+    margin: 0 auto;
+    max-width: 80%;
+    height: 100vh;
+
+    .skill-inner {
+        max-width: 100%;
+        height: 90vh;
+        background-color: #fff;
+        padding-top: 50px;
+        position: relative;
+
+        .dongbaek {
+            position: absolute;
+            right: 0%;
+            top: 5%;
+            transform: scale(0.5) rotate(-10deg);
+        }
+        .skill-list {
+            margin: 0 auto;
+            justify-items: center;
+            position: absolute;
+            width: 80%;
+            height: calc(80% - 70px);
+            left: calc(50% - 40%);
+            top: 200px;
+            padding: 10px;
+            box-sizing: border-box;
+            display: grid;
+            grid-gap: 1em;
+            @mixin grid-template-columns($columns...) {
+                -ms-grid-columns: $columns;
+                grid-template-columns: $columns;
+            }
+
+            @include grid-template-columns(repeat(3, 1fr));
+
+            .skill-sub {
+                position: relative;
+                margin: 10px auto;
+                text-align: center;
+
+                .graph {
+                    width: 200px;
+                    height: 200px;
+                    stroke: $purple;
+                    // border: 25px solid $purple;
+                    border-radius: 50%;
+                    box-sizing: border-box;
+                    position: relative;
+
+                    svg {
+                        position: absolute;
+                        top: 0;
+                        width: 100%;
+                        left: calc(50% - 50%);
+
+                        &:nth-child(2) {
+                            opacity: 0;
+                            display: none;
+                        }
+
+                        &.skill-graph {
+                            z-index: 1;
+                            display: block;
+                        }
+                        .graph-circle {
+                            stroke: $hotpink;
+                            stroke-width: 1;
+                            fill: none;
+                            stroke-linecap: round;
+                        }
+                    }
+
+                    &.on .skill-graph .graph-circle {
+                        animation: progress 3s ease-out forwards;
+                    }
+
+                    @keyframes progress {
+                        0% {
+                            stroke-dasharray: 0 100;
+                        }
+                    }
+
+                    .per {
+                        width: 100%;
+                        height: 50px;
+                        line-height: 50px;
+                        text-align: center;
+                        font-size: 2rem;
+                        font-weight: bolder;
+                        position: absolute;
+                        left: calc(50% - 50%);
+                        top: calc(50% - 25px);
+                    }
+                }
+                span.liner {
+                    position: absolute;
+                    width: 150px;
+                    font-size: 1.3rem;
+                    font-weight: bolder;
+                    top: 230px;
+                    left: calc(50% - 75px);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+/* #contact */
+#contact {
+    margin: 0 auto;
+    width: 1200px;
+    height: 100vh;
+    position: relative;
+
+    hr {
+        width: 1px;
+        height: 100vh;
+        background-color: red;
+        position: absolute;
+        left: 5vw;
+    }
+}
