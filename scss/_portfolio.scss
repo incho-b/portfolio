@@ -1,7 +1,31 @@
 /* #portfolio */
 #portfolio {
-    margin: 0 auto;
-    width: 1200px;
-    height: 100vh;
-    position: relative;
+    @include page-reset;
+
+    .port-inner {
+        @include page-inner;
+
+        .tab-btn {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .port-list {
+            display: grid;
+
+            .port-list-sub {
+                .polaroid {
+                    width: 30%;
+                    height: 300px;
+
+                    @include shadow(#aaa);
+
+                    .port-thum {
+                    }
+                    .port-text {
+                    }
+                }
+            }
+        }
+    }
 }

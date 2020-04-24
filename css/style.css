@@ -324,9 +324,36 @@ body {
 /* #portfolio */
 #portfolio {
   margin: 0 auto;
-  width: 1200px;
+  max-width: 80%;
   height: 100vh;
+}
+
+#portfolio .port-inner {
+  max-width: 100%;
+  height: 90vh;
+  background-color: #fff;
+  padding-top: 50px;
   position: relative;
+}
+
+#portfolio .port-inner .tab-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#portfolio .port-inner .port-list {
+  display: -ms-grid;
+  display: grid;
+}
+
+#portfolio .port-inner .port-list .port-list-sub .polaroid {
+  width: 30%;
+  height: 300px;
+  -webkit-box-shadow: 5px 5px 5px #aaa;
+          box-shadow: 5px 5px 5px #aaa;
 }
 
 /* #contact */
