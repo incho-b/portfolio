@@ -1,3 +1,5 @@
+@import 'mixin';
+
 /* #skill */
 #skill {
     @include page-reset;
@@ -11,20 +13,9 @@
             top: 5%;
             transform: scale(0.5) rotate(-10deg);
         }
-        .skill-list {
-            margin: 0 auto;
-            justify-items: center;
-            position: absolute;
-            width: 80%;
-            height: calc(80% - 70px);
-            left: calc(50% - 40%);
-            top: 200px;
-            padding: 10px;
-            box-sizing: border-box;
-            display: grid;
-            grid-gap: 1em;
 
-            @include grid-template-columns(repeat(3, 1fr));
+        .skill-list {
+            @include list-layout(repeat(3, 1fr));
 
             .skill-sub {
                 position: relative;
@@ -34,8 +25,6 @@
                 .graph {
                     width: 200px;
                     height: 200px;
-                    stroke: $purple;
-                    // border: 25px solid $purple;
                     border-radius: 50%;
                     box-sizing: border-box;
                     position: relative;
@@ -85,6 +74,8 @@
                         top: calc(50% - 25px);
                     }
                 }
+                /* .graph */
+
                 span.liner {
                     position: absolute;
                     width: 150px;

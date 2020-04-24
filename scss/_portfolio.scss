@@ -1,6 +1,11 @@
+@import 'mixin';
+
 /* #portfolio */
 #portfolio {
     @include page-reset;
+
+    .port-title {
+    }
 
     .port-inner {
         @include page-inner;
@@ -8,21 +13,48 @@
         .tab-btn {
             display: flex;
             justify-content: space-around;
+            position: relative;
+            top: 60px;
+            width: 80%;
+            left: calc(50% - 40%);
+            font-size: 1.5rem;
+            font-weight: bolder;
+            text-transform: uppercase;
+            border: 1px solid red;
         }
 
         .port-list {
-            display: grid;
+            @include list-layout(repeat(2, 1fr));
 
             .port-list-sub {
-                .polaroid {
-                    width: 30%;
-                    height: 300px;
+                position: relative;
+                margin: 10px auto;
+                text-align: center;
+                width: 100%;
 
+                .polaroid {
+                    width: 80%;
+                    height: 300px;
+                    position: relative;
+                    border: 1px solid #eee;
                     @include shadow(#aaa);
 
                     .port-thum {
+                        width: 80%;
+                        height: 60%;
+                        background: #000;
+                        position: absolute;
+                        left: calc(50% - 40%);
+                        top: 10%;
                     }
                     .port-text {
+                        position: absolute;
+                        width: 100%;
+                        bottom: 15%;
+                        text-align: center;
+                        left: calc(50% - 50%);
+                        font-weight: bolder;
+                        font-size: 1.5rem;
                     }
                 }
             }

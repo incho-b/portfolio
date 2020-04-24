@@ -41,13 +41,13 @@ body {
 }
 
 #body-wrap .box-shadow {
-  -webkit-box-shadow: 5px 5px 10px #555;
-          box-shadow: 5px 5px 10px #555;
+  -webkit-box-shadow: 5px 5px 5px #555;
+          box-shadow: 5px 5px 5px #555;
 }
 
 #body-wrap .liner {
   padding: 5px;
-  background-color: rgba(153, 136, 221, 0.2);
+  background-color: #98d;
   border-right: 7px solid rgba(153, 136, 221, 0.3);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -60,6 +60,7 @@ body {
   font-size: 3rem;
   font-weight: bolder;
   position: relative;
+  text-transform: uppercase;
 }
 
 #body-wrap .title p {
@@ -226,33 +227,33 @@ body {
 }
 
 #skill .skill-inner .skill-list {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1em;
+  -ms-grid-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  top: 200px;
+  padding: 10px;
   margin: 0 auto;
   justify-items: center;
   position: absolute;
   width: 80%;
   height: calc(80% - 70px);
   left: calc(50% - 40%);
-  top: 200px;
-  padding: 10px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  display: -ms-grid;
-  display: grid;
-  grid-gap: 1em;
-  -ms-grid-columns: repeat(3, 1fr);
-  grid-template-columns: repeat(3, 1fr);
 }
 
 #skill .skill-inner .skill-list .skill-sub {
   position: relative;
   margin: 10px auto;
   text-align: center;
+  /* .graph */
 }
 
 #skill .skill-inner .skill-list .skill-sub .graph {
   width: 200px;
   height: 200px;
-  stroke: #98d;
   border-radius: 50%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -342,18 +343,67 @@ body {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  position: relative;
+  top: 60px;
+  width: 80%;
+  left: calc(50% - 40%);
+  font-size: 1.5rem;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border: 1px solid red;
 }
 
 #portfolio .port-inner .port-list {
   display: -ms-grid;
   display: grid;
+  grid-gap: 1em;
+  -ms-grid-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  top: 200px;
+  padding: 10px;
+  margin: 0 auto;
+  justify-items: center;
+  position: absolute;
+  width: 80%;
+  height: calc(80% - 70px);
+  left: calc(50% - 40%);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#portfolio .port-inner .port-list .port-list-sub {
+  position: relative;
+  margin: 10px auto;
+  text-align: center;
+  width: 100%;
 }
 
 #portfolio .port-inner .port-list .port-list-sub .polaroid {
-  width: 30%;
+  width: 80%;
   height: 300px;
+  position: relative;
+  border: 1px solid #eee;
   -webkit-box-shadow: 5px 5px 5px #aaa;
           box-shadow: 5px 5px 5px #aaa;
+}
+
+#portfolio .port-inner .port-list .port-list-sub .polaroid .port-thum {
+  width: 80%;
+  height: 60%;
+  background: #000;
+  position: absolute;
+  left: calc(50% - 40%);
+  top: 10%;
+}
+
+#portfolio .port-inner .port-list .port-list-sub .polaroid .port-text {
+  position: absolute;
+  width: 100%;
+  bottom: 15%;
+  text-align: center;
+  left: calc(50% - 50%);
+  font-weight: bolder;
+  font-size: 1.5rem;
 }
 
 /* #contact */

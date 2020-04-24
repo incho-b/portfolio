@@ -38,6 +38,16 @@ Galaxy S5 : 360 * 640
   #wrap #skill .skill-inner .skill-list .skill-sub span.liner {
     top: 190px;
   }
+  #portfolio .port-inner .port-list {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    top: 150px;
+  }
+  #portfolio .port-inner .tab-btn {
+    top: 50px;
+    width: 80%;
+    left: calc(50% - 40%);
+  }
 }
 
 /* Mobile */
@@ -100,5 +110,16 @@ Galaxy S5 : 360 * 640
     max-width: 100px;
     left: calc(50% - 48px);
     font-size: 0.8rem;
+  }
+  #wrap #portfolio .port-inner .port-list {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    padding-top: 30px;
+    top: 100px;
+  }
+  #wrap #portfolio .port-inner .tab-btn {
+    top: 20px;
+    width: 100%;
+    left: calc(50% - 50%);
   }
 }

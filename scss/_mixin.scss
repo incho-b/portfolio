@@ -23,7 +23,7 @@
     text-shadow: none;
 }
 
-@mixin liner {
+@mixin liner($liner-bg: $purple) {
     padding: 5px;
     background-color: $liner-bg;
     border-right: $liner-border;
@@ -37,6 +37,7 @@
     font-size: 3rem;
     font-weight: bolder;
     position: relative;
+    text-transform: uppercase;
 }
 
 @mixin underline($under: url(../img/underline.png)) {
@@ -48,7 +49,30 @@
     top: calc(100% - 25px);
 }
 
+@mixin list-layout($columns) {
+    display: grid;
+    grid-gap: 1em;
+    @include grid-template-columns($columns);
+    top: 200px;
+    padding: 10px;
+    margin: 0 auto;
+    justify-items: center;
+    position: absolute;
+    width: 80%;
+    height: calc(80% - 70px);
+    left: calc(50% - 40%);
+    box-sizing: border-box;
+}
+
 @mixin grid-template-columns($columns...) {
     -ms-grid-columns: $columns;
     grid-template-columns: $columns;
+}
+
+// @mixin calc($ctop: 50%, $tminus: 50%, $cleft: 50%, $lminus: 50%) {
+//     top: calc($ctop - $tminus);
+//     left: calc($cleft - $lminus);
+// }
+@mixin calct($ctop: 50%, $tminus: 50%) {
+    top: calc($ctop - $tminus);
 }

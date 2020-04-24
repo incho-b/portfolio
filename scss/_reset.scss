@@ -1,4 +1,4 @@
-@charset 'UTF-8';
+@import 'mixin';
 
 /* RESET */
 a {
@@ -22,7 +22,7 @@ a {
 $pink: #fde;
 $hotpink: #f5989d;
 $purple: #98d;
-$liner-bg: rgba(153, 136, 221, 0.2);
+// $liner-bg: rgba(153, 136, 221, 0.2);
 $liner-border: 7px solid rgba(153, 136, 221, 0.3);
 
 /* font-family */

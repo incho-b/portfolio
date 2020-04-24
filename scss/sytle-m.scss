@@ -56,6 +56,24 @@ Galaxy S5 : 360 * 640
             }
         }
     }
+
+    #portfolio {
+        .port-inner {
+            .port-list {
+                grid-template-columns: repeat(2, 1fr);
+                top: 150px;
+
+                .polaroid {
+                }
+            }
+
+            .tab-btn {
+                top: 50px;
+                width: 80%;
+                left: calc(50% - 40%);
+            }
+        }
+    }
 }
 
 /* Mobile */
@@ -133,6 +151,25 @@ Galaxy S5 : 360 * 640
                             font-size: 0.8rem;
                         }
                     }
+                }
+            }
+        }
+
+        #portfolio {
+            .port-inner {
+                .port-list {
+                    grid-template-columns: repeat(2, 1fr);
+                    padding-top: 30px;
+                    top: 100px;
+
+                    .polaroid {
+                    }
+                }
+
+                .tab-btn {
+                    top: 20px;
+                    width: 100%;
+                    left: calc(50% - 50%);
                 }
             }
         }
