@@ -1,4 +1,4 @@
-@charset 'UTF-8';
+@import 'mixin';
 
 /*
 iPad Pro : 1024 * 1366
@@ -41,7 +41,7 @@ Galaxy S5 : 360 * 640
         #skill {
             .skill-inner {
                 .skill-list {
-                    grid-template-columns: repeat(2, 1fr);
+                    @include grid-template-columns(repeat(2, 1fr));
                     top: 150px;
 
                     .skill-sub {
@@ -60,14 +60,21 @@ Galaxy S5 : 360 * 640
     #portfolio {
         .port-inner {
             .port-list {
-                grid-template-columns: repeat(2, 1fr);
-                top: 150px;
+                @include grid-template-columns(repeat(2, 1fr));
+                top: 170px;
 
-                .polaroid {
+                .port-list-sub {
+                    .polaroid {
+                        max-width: 100%;
+                        height: 200px;
+                    }
                 }
             }
 
             .tab-btn {
+                background: #fff;
+                z-index: 10;
+                padding-bottom: 10px;
                 top: 50px;
                 width: 80%;
                 left: calc(50% - 40%);
@@ -130,7 +137,7 @@ Galaxy S5 : 360 * 640
                     left: calc(100% - 80%);
                 }
                 .skill-list {
-                    grid-template-columns: repeat(2, 1fr);
+                    @include grid-template-columns(repeat(2, 1fr));
                     padding-top: 30px;
                     top: 100px;
 
@@ -158,18 +165,24 @@ Galaxy S5 : 360 * 640
         #portfolio {
             .port-inner {
                 .port-list {
-                    grid-template-columns: repeat(2, 1fr);
-                    padding-top: 30px;
-                    top: 100px;
+                    // @include grid-template-columns(repeat(1, 1fr));
+                    top: 130px;
 
-                    .polaroid {
+                    .port-list-sub {
+                        .polaroid {
+                            max-width: 100%;
+                            height: 150px;
+                            .port-text {
+                                font-size: 0.8rem;
+                            }
+                        }
                     }
                 }
 
                 .tab-btn {
                     top: 20px;
-                    width: 100%;
-                    left: calc(50% - 50%);
+                    width: 80%;
+                    font-size: 0.8rem;
                 }
             }
         }

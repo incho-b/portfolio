@@ -4,9 +4,6 @@
 #portfolio {
     @include page-reset;
 
-    .port-title {
-    }
-
     .port-inner {
         @include page-inner;
 
@@ -20,11 +17,11 @@
             font-size: 1.5rem;
             font-weight: bolder;
             text-transform: uppercase;
-            border: 1px solid red;
         }
 
         .port-list {
             @include list-layout(repeat(2, 1fr));
+            overflow-y: scroll;
 
             .port-list-sub {
                 position: relative;
@@ -33,11 +30,12 @@
                 width: 100%;
 
                 .polaroid {
-                    width: 80%;
+                    max-width: 80%;
                     height: 300px;
                     position: relative;
                     border: 1px solid #eee;
                     @include shadow(#aaa);
+                    text-transform: uppercase;
 
                     .port-thum {
                         width: 80%;
@@ -46,6 +44,32 @@
                         position: absolute;
                         left: calc(50% - 40%);
                         top: 10%;
+                        overflow: hidden;
+                        border: 1px solid #ddd;
+
+                        .port-th-sub {
+                            position: absolute;
+                            width: 100%;
+                            height: 100px;
+                            line-height: 100px;
+                            top: calc(50% - 50px);
+                            left: calc(50% - 50%);
+                            color: #fff;
+                            font-weight: bolder;
+                            display: none;
+                        }
+
+                        &:hover img {
+                            opacity: 0.7;
+                        }
+                        &:hover .port-th-sub {
+                            display: block;
+                        }
+
+                        img {
+                            width: 100%;
+                            float: left;
+                        }
                     }
                     .port-text {
                         position: absolute;

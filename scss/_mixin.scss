@@ -1,12 +1,12 @@
-@mixin page-reset {
+@mixin page-reset($page-height: 100vh) {
     margin: 0 auto;
     max-width: 80%;
-    height: 100vh;
+    height: $page-height;
 }
 
-@mixin page-inner($position: relative) {
+@mixin page-inner($position: relative, $inner-height: 90vh) {
     max-width: 100%;
-    height: 90vh;
+    height: $inner-height;
     background-color: #fff;
     padding-top: 50px;
     position: $position;
@@ -23,10 +23,10 @@
     text-shadow: none;
 }
 
-@mixin liner($liner-bg: $purple) {
+@mixin liner {
     padding: 5px;
-    background-color: $liner-bg;
-    border-right: $liner-border;
+    background-color: $liner-bg-color;
+    border-right: $liner-border-color;
     box-sizing: border-box;
 }
 

@@ -1,15 +1,35 @@
 /* #contact */
 #contact {
-    margin: 0 auto;
-    width: 1200px;
+    max-width: 100vw;
     height: 100vh;
+    background: url(../img/papertear_bg2.png) top;
+    background-size: cover;
     position: relative;
+    top: -150px;
 
-    hr {
-        width: 1px;
-        height: 100vh;
-        background-color: red;
-        position: absolute;
-        left: 5vw;
+    .cont-sub {
+        max-width: 1200px;
+        left: calc(50% - 600px);
+        position: relative;
+        top: 200px;
+        box-sizing: border-box;
+
+        .cont-inner {
+            @include page-reset(50vh);
+            // @include page-inner(relative, 40vh);
+            background-color: #fff;
+            background-image: $grid;
+            top: 5vh;
+            position: relative;
+
+            hr {
+                width: 1px;
+                height: 90%;
+                background-color: red;
+                position: absolute;
+                top: calc(50% - 45%);
+                left: 20%;
+            }
+        }
     }
 }
