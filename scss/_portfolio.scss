@@ -7,9 +7,27 @@
     .port-inner {
         @include page-inner;
 
+        .angae {
+            position: absolute;
+            right: -5%;
+            top: -7%;
+            transform: scale(0.5) rotate(45deg);
+            animation: angae_bounce 1s infinite ease-in-out;
+        }
+
+        @keyframes angae_bounce {
+            50% {
+                transform: scale(0.5) rotate(40deg);
+            }
+            100% {
+                transform: scale(0.5) rotate(45deg);
+            }
+        }
+
         .tab-btn {
             display: flex;
             justify-content: space-around;
+            flex-wrap: nowrap;
             position: relative;
             top: 60px;
             width: 80%;
@@ -17,25 +35,83 @@
             font-size: 1.5rem;
             font-weight: bolder;
             text-transform: uppercase;
+            cursor: pointer;
+
+            li {
+                &.copy {
+                    @include liner($liner-bg-color2, $liner-border-color2);
+                }
+                &.design {
+                    @include liner($liner-bg-color3, $liner-border-color3);
+                }
+                &.etc {
+                    @include liner($liner-bg-color4, $liner-border-color4);
+                }
+            }
         }
 
         .port-list {
             @include list-layout(repeat(2, 1fr));
             overflow-y: scroll;
+            background: $pink;
+            padding-top: 10px;
+            border-top: 30px solid $pink;
+            border-bottom: 30px solid $pink;
+            @include shadow(#ddd);
 
             .port-list-sub {
                 position: relative;
-                margin: 10px auto;
                 text-align: center;
                 width: 100%;
 
+                .polatape {
+                    width: 70%;
+                    height: 40px;
+                    line-height: 40px;
+                    position: absolute;
+                    top: -20px;
+                    left: calc(50% - 35%);
+                    font-weight: bolder;
+                    // font-size: 1.5rem;
+                    font-size: 0;
+                    color: #fff;
+                }
+
+                &.copy .polaroid::before {
+                    background-image: url(../img/tape.png);
+                }
+                &.design .polaroid::before {
+                    background-image: url(../img/tape2.png);
+                }
+                &.etc .polaroid::before {
+                    background-image: url(../img/tape3.png);
+                }
+
                 .polaroid {
+                    margin: 10px auto;
                     max-width: 80%;
                     height: 300px;
                     position: relative;
                     border: 1px solid #eee;
                     @include shadow(#aaa);
                     text-transform: uppercase;
+                    background: #fff;
+
+                    &::before {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        width: 30%;
+                        height: 30px;
+                        top: -10px;
+                        left: calc(50% - 15%);
+                        background-repeat: no-repeat;
+                        background-position: 0 0;
+                        background-size: cover;
+                        transform: rotate(-15deg);
+                        opacity: 0.7;
+                        z-index: 99;
+                    }
 
                     .port-thum {
                         width: 80%;
@@ -74,11 +150,17 @@
                     .port-text {
                         position: absolute;
                         width: 100%;
-                        bottom: 15%;
+                        bottom: 5%;
                         text-align: center;
                         left: calc(50% - 50%);
                         font-weight: bolder;
                         font-size: 1.5rem;
+                        font-family: $caveat;
+
+                        p {
+                            margin-top: 10px;
+                            font-size: 1rem;
+                        }
                     }
                 }
             }

@@ -32,4 +32,41 @@ $(function () {
             $('.graph').removeClass('on');
         }
     });
-});
+}); // scroll fn
+
+$(function () {
+    $('.tab-btn li').click(function () {
+        $('.port-list li').hide(500);
+
+        if ($(this).hasClass('all')) {
+            $('.port-list li').fadeIn(1000);
+        } else if ($(this).hasClass('copy')) {
+            $('.port-list .copy').fadeIn(1000);
+        } else if ($(this).hasClass('design')) {
+            $('.port-list .design').fadeIn(1000);
+        } else if ($(this).hasClass('etc')) {
+            $('.port-list .etc').fadeIn(1000);
+        }
+    });
+}); //portfolio fn
+
+$(function () {
+    $('#popup').hide();
+
+    $('.port-list .etc').click(function (e) {
+        e.preventDefault();
+        $('#popup').show();
+
+        let $hwatoo = $(this).find('.polaroid');
+        let path = $(this).find('a').attr('href');
+
+        if (path != $('.pop-inner img').attr('src')) {
+            // if ($hwatoo.hasClass('hwatoo')) {
+            $('.pop-inner img').attr({ src: path });
+            // }
+        }
+    });
+    $('#popup .close, .pop-bg').click(function () {
+        $('#popup').hide();
+    });
+}); //popup fn

@@ -22,14 +22,24 @@ a {
 $pink: #fde;
 $hotpink: #f5989d;
 $purple: #98d;
-$liner-bg-color: rgba(153, 136, 221, 0.2);
-$liner-border-color: 5px solid rgba(153, 136, 221, 0.3);
+
+$liner-bg-color1: rgba(153, 136, 221, 0.2);
+$liner-bg-color2: rgba(211, 132, 154, 0.2);
+$liner-bg-color3: rgba(132, 211, 173, 0.2);
+$liner-bg-color4: rgba(255, 187, 0, 0.2);
+$liner-border-color1: 5px solid rgba(153, 136, 221, 0.3);
+$liner-border-color2: 5px solid rgba(211, 132, 154, 0.3);
+$liner-border-color3: 5px solid rgba(132, 211, 173, 0.3);
+$liner-border-color4: 5px solid rgba(255, 187, 0, 0.3);
 
 /* font-family */
 /* bold */
 $rubik: 'Rubik', sans-serif;
 $chango: 'Chango', cursive;
 $ericaOne: 'Erica One', cursive;
+/* handwrite */
+$permanentMarker: 'Permanent Marker', cursive;
+$caveat: 'Caveat', cursive;
 /* slant */
 $badScript: 'Bad Script', cursive;
 $cedarvilleCursive: 'Cedarville Cursive', cursive;
@@ -42,10 +52,11 @@ $notoSans: 'Noto Sans KR', sans-serif;
 
 /* background */
 $grid: url(../img/20grid_bg.png);
+$body-height: 400vh;
 
 body {
     width: 100vw;
-    height: 300vh;
+    height: $body-height;
     font-family: $rubik, $notoSans;
     color: #333;
 }

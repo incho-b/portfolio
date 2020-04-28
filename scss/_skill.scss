@@ -9,9 +9,19 @@
 
         .dongbaek {
             position: absolute;
-            right: 0%;
-            top: 5%;
+            left: 55%;
+            top: 3%;
             transform: scale(0.5) rotate(-10deg);
+            animation: dong_bounce 1s infinite ease-in-out;
+        }
+
+        @keyframes dong_bounce {
+            50% {
+                transform: scale(0.5) rotate(-15deg);
+            }
+            100% {
+                transform: scale(0.5) rotate(-10deg);
+            }
         }
 
         .skill-list {

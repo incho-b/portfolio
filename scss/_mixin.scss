@@ -18,15 +18,15 @@
 
 @mixin body($bgimg: url(../img/20grid_bg.png)) {
     max-width: 100vw;
-    height: 300vh;
+    height: $body-height;
     background: $bgimg;
     text-shadow: none;
 }
 
-@mixin liner {
+@mixin liner($liner-bg: $liner-bg-color1, $liner-border: $liner-border-color1) {
     padding: 5px;
-    background-color: $liner-bg-color;
-    border-right: $liner-border-color;
+    background-color: $liner-bg;
+    border-right: $liner-border;
     box-sizing: border-box;
 }
 

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* RESET */
 a {
   text-decoration: none;
@@ -22,12 +23,13 @@ a {
 /* color */
 /* font-family */
 /* bold */
+/* handwrite */
 /* slant */
 /* korean */
 /* background */
 body {
   width: 100vw;
-  height: 300vh;
+  height: 400vh;
   font-family: "Rubik", sans-serif, "Noto Sans KR", sans-serif;
   color: #333;
 }
@@ -35,7 +37,7 @@ body {
 /* #body-wrap */
 #body-wrap {
   max-width: 100vw;
-  height: 300vh;
+  height: 400vh;
   background: url(../img/20grid_bg.png);
   text-shadow: none;
 }
@@ -136,7 +138,7 @@ body {
   overflow: hidden;
 }
 
-#info .info-bg .circle .circle-inner img {
+#info .info-bg .circle img {
   width: 130%;
   position: absolute;
   top: -50px;
@@ -230,10 +232,34 @@ body {
 
 #skill .skill-inner .dongbaek {
   position: absolute;
-  right: 0%;
-  top: 5%;
+  left: 55%;
+  top: 3%;
   -webkit-transform: scale(0.5) rotate(-10deg);
           transform: scale(0.5) rotate(-10deg);
+  -webkit-animation: dong_bounce 1s infinite ease-in-out;
+          animation: dong_bounce 1s infinite ease-in-out;
+}
+
+@-webkit-keyframes dong_bounce {
+  50% {
+    -webkit-transform: scale(0.5) rotate(-15deg);
+            transform: scale(0.5) rotate(-15deg);
+  }
+  100% {
+    -webkit-transform: scale(0.5) rotate(-10deg);
+            transform: scale(0.5) rotate(-10deg);
+  }
+}
+
+@keyframes dong_bounce {
+  50% {
+    -webkit-transform: scale(0.5) rotate(-15deg);
+            transform: scale(0.5) rotate(-15deg);
+  }
+  100% {
+    -webkit-transform: scale(0.5) rotate(-10deg);
+            transform: scale(0.5) rotate(-10deg);
+  }
 }
 
 #skill .skill-inner .skill-list {
@@ -347,12 +373,46 @@ body {
   position: relative;
 }
 
+#portfolio .port-inner .angae {
+  position: absolute;
+  right: -5%;
+  top: -7%;
+  -webkit-transform: scale(0.5) rotate(45deg);
+          transform: scale(0.5) rotate(45deg);
+  -webkit-animation: angae_bounce 1s infinite ease-in-out;
+          animation: angae_bounce 1s infinite ease-in-out;
+}
+
+@-webkit-keyframes angae_bounce {
+  50% {
+    -webkit-transform: scale(0.5) rotate(40deg);
+            transform: scale(0.5) rotate(40deg);
+  }
+  100% {
+    -webkit-transform: scale(0.5) rotate(45deg);
+            transform: scale(0.5) rotate(45deg);
+  }
+}
+
+@keyframes angae_bounce {
+  50% {
+    -webkit-transform: scale(0.5) rotate(40deg);
+            transform: scale(0.5) rotate(40deg);
+  }
+  100% {
+    -webkit-transform: scale(0.5) rotate(45deg);
+            transform: scale(0.5) rotate(45deg);
+  }
+}
+
 #portfolio .port-inner .tab-btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   position: relative;
   top: 60px;
   width: 80%;
@@ -360,6 +420,31 @@ body {
   font-size: 1.5rem;
   font-weight: bolder;
   text-transform: uppercase;
+  cursor: pointer;
+}
+
+#portfolio .port-inner .tab-btn li.copy {
+  padding: 5px;
+  background-color: rgba(211, 132, 154, 0.2);
+  border-right: 5px solid rgba(211, 132, 154, 0.3);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#portfolio .port-inner .tab-btn li.design {
+  padding: 5px;
+  background-color: rgba(132, 211, 173, 0.2);
+  border-right: 5px solid rgba(132, 211, 173, 0.3);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#portfolio .port-inner .tab-btn li.etc {
+  padding: 5px;
+  background-color: rgba(255, 187, 0, 0.2);
+  border-right: 5px solid rgba(255, 187, 0, 0.3);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 #portfolio .port-inner .port-list {
@@ -379,16 +464,58 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   overflow-y: scroll;
+  background: #fde;
+  padding-top: 10px;
+  border-top: 30px solid #fde;
+  border-bottom: 30px solid #fde;
+  -webkit-box-shadow: 5px 5px 5px #ddd;
+          box-shadow: 5px 5px 5px #ddd;
 }
 
 #portfolio .port-inner .port-list .port-list-sub {
   position: relative;
-  margin: 10px auto;
   text-align: center;
   width: 100%;
 }
 
+#portfolio .port-inner .port-list .port-list-sub .polatape {
+  width: 70%;
+  height: 40px;
+  line-height: 40px;
+  position: absolute;
+  top: -20px;
+  left: calc(50% - 35%);
+  font-weight: bolder;
+  font-size: 0;
+  color: #fff;
+}
+
+#portfolio .port-inner .port-list .port-list-sub.copy .polaroid::before {
+  background-image: url(../img/tape.png);
+}
+
+#portfolio .port-inner .port-list .port-list-sub.design .polaroid::before {
+  background-image: url(../img/tape2.png);
+}
+
+#portfolio .port-inner .port-list .port-list-sub.etc .polaroid::before {
+  background-image: url(../img/tape3.png);
+}
+
+#portfolio .port-inner .port-list .port-list-sub.etc port-thum {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 #portfolio .port-inner .port-list .port-list-sub .polaroid {
+  margin: 10px auto;
   max-width: 80%;
   height: 300px;
   position: relative;
@@ -396,6 +523,24 @@ body {
   -webkit-box-shadow: 5px 5px 5px #aaa;
           box-shadow: 5px 5px 5px #aaa;
   text-transform: uppercase;
+  background: #fff;
+}
+
+#portfolio .port-inner .port-list .port-list-sub .polaroid::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 30%;
+  height: 30px;
+  top: -10px;
+  left: calc(50% - 15%);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+  -webkit-transform: rotate(-15deg);
+          transform: rotate(-15deg);
+  opacity: 0.7;
+  z-index: 99;
 }
 
 #portfolio .port-inner .port-list .port-list-sub .polaroid .port-thum {
@@ -437,11 +582,17 @@ body {
 #portfolio .port-inner .port-list .port-list-sub .polaroid .port-text {
   position: absolute;
   width: 100%;
-  bottom: 15%;
+  bottom: 5%;
   text-align: center;
   left: calc(50% - 50%);
   font-weight: bolder;
   font-size: 1.5rem;
+  font-family: "Caveat", cursive;
+}
+
+#portfolio .port-inner .port-list .port-list-sub .polaroid .port-text p {
+  margin-top: 10px;
+  font-size: 1rem;
 }
 
 /* #contact */
@@ -481,3 +632,80 @@ body {
   top: calc(50% - 45%);
   left: 20%;
 }
+
+#popup {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+}
+
+#popup .pop-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+#popup .pop-inner {
+  width: 60%;
+  height: 60%;
+  background: #fff;
+  position: relative;
+  top: calc(50% - 30%);
+  left: calc(50% - 30%);
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#popup .pop-inner button.close {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  border-radius: 50%;
+  border: 2px solid #98d;
+  background: none;
+  text-indent: -99999px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#popup .pop-inner button.close::before, #popup .pop-inner button.close::after {
+  content: '';
+  display: block;
+  width: 2px;
+  height: 30px;
+  background: #98d;
+  position: absolute;
+  top: calc(50% - 15px);
+  right: calc(50% - 0px);
+}
+
+#popup .pop-inner button.close::before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+#popup .pop-inner button.close::after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+/*
+
+커서 연필 ok.. 
+hover 형광펜 ok..
+
+*/

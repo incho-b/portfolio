@@ -40,6 +40,11 @@ Galaxy S5 : 360 * 640
     #wrap {
         #skill {
             .skill-inner {
+                .dongbaek {
+                    top: 5%;
+                    right: 25%;
+                }
+
                 .skill-list {
                     @include grid-template-columns(repeat(2, 1fr));
                     top: 150px;
@@ -67,6 +72,14 @@ Galaxy S5 : 360 * 640
                     .polaroid {
                         max-width: 100%;
                         height: 200px;
+
+                        .port-text {
+                            bottom: 3%;
+
+                            p {
+                                margin-top: 2px;
+                            }
+                        }
                     }
                 }
             }
@@ -96,22 +109,25 @@ Galaxy S5 : 360 * 640
 
     #info {
         .info-bg {
+            top: -10%;
+
             .circle {
                 transform: scale(0.6);
-                top: 5%;
+                top: calc(50% - 270px);
                 left: 30%;
             }
 
             .namebox {
                 transform: scale(0.6) rotate(-15deg);
-                left: 35%;
+                top: calc(50% - 130px);
+                left: 40%;
             }
 
             .info-box {
                 max-width: 300px;
                 max-height: 300px;
                 left: calc(50% - 150px);
-                top: calc(55% - 150px);
+                top: calc(50% - 100px);
 
                 .achon-face {
                     display: none;
@@ -134,8 +150,18 @@ Galaxy S5 : 360 * 640
                 .dongbaek {
                     transform: scale(0.3) rotate(-10deg);
                     top: 3%;
-                    left: calc(100% - 80%);
+                    right: 50%;
                 }
+
+                @keyframes dong_bounce {
+                    50% {
+                        transform: scale(0.3) rotate(-15deg);
+                    }
+                    100% {
+                        transform: scale(0.3) rotate(-10deg);
+                    }
+                }
+
                 .skill-list {
                     @include grid-template-columns(repeat(2, 1fr));
                     padding-top: 30px;
@@ -164,16 +190,34 @@ Galaxy S5 : 360 * 640
 
         #portfolio {
             .port-inner {
+                .angae {
+                    transform: scale(0.3) rotate(45deg);
+                    right: -35%;
+                    top: -13%;
+                }
+
+                @keyframes angae_bounce {
+                    50% {
+                        transform: scale(0.3) rotate(40deg);
+                    }
+                    100% {
+                        transform: scale(0.3) rotate(45deg);
+                    }
+                }
                 .port-list {
-                    // @include grid-template-columns(repeat(1, 1fr));
                     top: 130px;
 
                     .port-list-sub {
                         .polaroid {
                             max-width: 100%;
                             height: 150px;
+
                             .port-text {
                                 font-size: 0.8rem;
+
+                                p {
+                                    font-size: 0.6rem;
+                                }
                             }
                         }
                     }
@@ -182,7 +226,7 @@ Galaxy S5 : 360 * 640
                 .tab-btn {
                     top: 20px;
                     width: 80%;
-                    font-size: 0.8rem;
+                    font-size: 0.6rem;
                 }
             }
         }

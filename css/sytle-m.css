@@ -26,6 +26,10 @@ Galaxy S5 : 360 * 640
     font-size: 1.3rem;
     padding: 170px 50px;
   }
+  #wrap #skill .skill-inner .dongbaek {
+    top: 5%;
+    right: 25%;
+  }
   #wrap #skill .skill-inner .skill-list {
     -ms-grid-columns: repeat(2, 1fr);
     grid-template-columns: repeat(2, 1fr);
@@ -47,6 +51,12 @@ Galaxy S5 : 360 * 640
     max-width: 100%;
     height: 200px;
   }
+  #portfolio .port-inner .port-list .port-list-sub .polaroid .port-text {
+    bottom: 3%;
+  }
+  #portfolio .port-inner .port-list .port-list-sub .polaroid .port-text p {
+    margin-top: 2px;
+  }
   #portfolio .port-inner .tab-btn {
     background: #fff;
     z-index: 10;
@@ -65,22 +75,26 @@ Galaxy S5 : 360 * 640
   #body-wrap .underline {
     height: 30px;
   }
+  #info .info-bg {
+    top: -10%;
+  }
   #info .info-bg .circle {
     -webkit-transform: scale(0.6);
             transform: scale(0.6);
-    top: 5%;
+    top: calc(50% - 270px);
     left: 30%;
   }
   #info .info-bg .namebox {
     -webkit-transform: scale(0.6) rotate(-15deg);
             transform: scale(0.6) rotate(-15deg);
-    left: 35%;
+    top: calc(50% - 130px);
+    left: 40%;
   }
   #info .info-bg .info-box {
     max-width: 300px;
     max-height: 300px;
     left: calc(50% - 150px);
-    top: calc(55% - 150px);
+    top: calc(50% - 100px);
   }
   #info .info-bg .info-box .achon-face {
     display: none;
@@ -96,7 +110,27 @@ Galaxy S5 : 360 * 640
     -webkit-transform: scale(0.3) rotate(-10deg);
             transform: scale(0.3) rotate(-10deg);
     top: 3%;
-    left: calc(100% - 80%);
+    right: 50%;
+  }
+  @-webkit-keyframes dong_bounce {
+    50% {
+      -webkit-transform: scale(0.3) rotate(-15deg);
+              transform: scale(0.3) rotate(-15deg);
+    }
+    100% {
+      -webkit-transform: scale(0.3) rotate(-10deg);
+              transform: scale(0.3) rotate(-10deg);
+    }
+  }
+  @keyframes dong_bounce {
+    50% {
+      -webkit-transform: scale(0.3) rotate(-15deg);
+              transform: scale(0.3) rotate(-15deg);
+    }
+    100% {
+      -webkit-transform: scale(0.3) rotate(-10deg);
+              transform: scale(0.3) rotate(-10deg);
+    }
   }
   #wrap #skill .skill-inner .skill-list {
     -ms-grid-columns: repeat(2, 1fr);
@@ -118,6 +152,32 @@ Galaxy S5 : 360 * 640
     left: calc(50% - 48px);
     font-size: 0.8rem;
   }
+  #wrap #portfolio .port-inner .angae {
+    -webkit-transform: scale(0.3) rotate(45deg);
+            transform: scale(0.3) rotate(45deg);
+    right: -35%;
+    top: -13%;
+  }
+  @-webkit-keyframes angae_bounce {
+    50% {
+      -webkit-transform: scale(0.3) rotate(40deg);
+              transform: scale(0.3) rotate(40deg);
+    }
+    100% {
+      -webkit-transform: scale(0.3) rotate(45deg);
+              transform: scale(0.3) rotate(45deg);
+    }
+  }
+  @keyframes angae_bounce {
+    50% {
+      -webkit-transform: scale(0.3) rotate(40deg);
+              transform: scale(0.3) rotate(40deg);
+    }
+    100% {
+      -webkit-transform: scale(0.3) rotate(45deg);
+              transform: scale(0.3) rotate(45deg);
+    }
+  }
   #wrap #portfolio .port-inner .port-list {
     top: 130px;
   }
@@ -128,9 +188,12 @@ Galaxy S5 : 360 * 640
   #wrap #portfolio .port-inner .port-list .port-list-sub .polaroid .port-text {
     font-size: 0.8rem;
   }
+  #wrap #portfolio .port-inner .port-list .port-list-sub .polaroid .port-text p {
+    font-size: 0.6rem;
+  }
   #wrap #portfolio .port-inner .tab-btn {
     top: 20px;
     width: 80%;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
   }
 }

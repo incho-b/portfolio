@@ -32,10 +32,20 @@
             left: 10%;
             z-index: 5;
 
-            img {
-                width: 120%;
+            .circle-inner {
+                width: 300px;
+                height: 400px;
                 position: absolute;
-                top: -40%;
+                left: 0;
+                bottom: 0;
+                border-radius: 0 0 150px 150px;
+                overflow: hidden;
+            }
+
+            img {
+                width: 130%;
+                position: absolute;
+                top: -50px;
                 left: -10%;
             }
         }
