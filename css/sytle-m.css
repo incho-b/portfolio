@@ -23,8 +23,8 @@ Galaxy S5 : 360 * 640
     left: 50%;
   }
   #info .info-bg .info-box .info-box-inner {
-    font-size: 1.3rem;
-    padding: 170px 50px;
+    font-size: 0.9rem;
+    padding: 130px 50px;
   }
   #wrap #skill .skill-inner .dongbaek {
     top: 5%;
@@ -79,32 +79,35 @@ Galaxy S5 : 360 * 640
     top: -10%;
   }
   #info .info-bg .circle {
-    -webkit-transform: scale(0.6);
-            transform: scale(0.6);
-    top: calc(50% - 270px);
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    top: calc(50% - 300px);
     left: 30%;
   }
   #info .info-bg .namebox {
     -webkit-transform: scale(0.6) rotate(-15deg);
             transform: scale(0.6) rotate(-15deg);
-    top: calc(50% - 130px);
+    top: calc(50% - 170px);
     left: 40%;
   }
   #info .info-bg .info-box {
-    max-width: 300px;
-    max-height: 300px;
-    left: calc(50% - 150px);
-    top: calc(50% - 100px);
+    max-width: 340px;
+    max-height: 350px;
+    left: calc(50% - 170px);
+    top: calc(50% - 150px);
   }
   #info .info-bg .info-box .achon-face {
     display: none;
   }
   #info .info-bg .info-box .info-box-inner {
-    font-size: 0.9rem;
-    padding: 60px 10px;
+    font-size: 0.7rem;
+    padding: 60px 0px;
   }
   #info .info-bg .info-box .info-box-inner p {
-    padding: 5px 10px;
+    padding: 5px 5px;
+  }
+  #info .info-bg .info-box .info-box-inner p span:first-child {
+    padding-right: 10px;
   }
   #wrap #skill .skill-inner .dongbaek {
     -webkit-transform: scale(0.3) rotate(-10deg);

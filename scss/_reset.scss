@@ -4,6 +4,7 @@
 a {
     text-decoration: none;
     color: #333;
+    cursor: url(../img/cursor-pointer.png), auto;
 }
 .clearfix::before,
 .clearfix::after {
@@ -35,30 +36,21 @@ $liner-border-color4: 5px solid rgba(255, 187, 0, 0.3);
 /* font-family */
 /* bold */
 $rubik: 'Rubik', sans-serif;
-$chango: 'Chango', cursive;
-$ericaOne: 'Erica One', cursive;
 /* handwrite */
-$permanentMarker: 'Permanent Marker', cursive;
-$caveat: 'Caveat', cursive;
-/* slant */
-$badScript: 'Bad Script', cursive;
-$cedarvilleCursive: 'Cedarville Cursive', cursive;
-$Caveat: 'Caveat', cursive;
-$homemadeApple: 'Homemade Apple', cursive;
-$permanentMarker: 'Permanent Marker', cursive;
+$handwite: 'Shadows Into Light', cursive;
 /* korean */
-$doHyeon: 'Do Hyeon', sans-serif;
 $notoSans: 'Noto Sans KR', sans-serif;
 
 /* background */
-$grid: url(../img/20grid_bg.png);
-$body-height: 400vh;
+$grid: url(../img/20grid_bg.png), auto;
+$body-height: 100%;
 
 body {
     width: 100vw;
     height: $body-height;
     font-family: $rubik, $notoSans;
     color: #333;
+    cursor: url(../img/cursor_normal.png), auto;
 }
 
 /* #body-wrap */
