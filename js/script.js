@@ -32,6 +32,10 @@ $(function () {
             $('.graph').removeClass('on');
         }
     });
+
+    if ($(window).scrollTop() > 2600) {
+        $('.cont-inner .title').addClass('on');
+    }
 }); // scroll fn
 
 $(function () {
@@ -62,7 +66,7 @@ $(function () {
 
         if (path != $('.pop-inner img').attr('src')) {
             // if ($hwatoo.hasClass('hwatoo')) {
-            $('.pop-inner img').attr({ src: path });
+            $('.pop-inner img').attr({ src: path }).css({ width: '100%' });
             // }
         }
     });

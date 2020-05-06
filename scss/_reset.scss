@@ -43,11 +43,12 @@ $notoSans: 'Noto Sans KR', sans-serif;
 
 /* background */
 $grid: url(../img/20grid_bg.png), auto;
+
 $body-height: 100%;
 
 body {
     width: 100vw;
-    height: $body-height;
+    // height: $body-height;
     font-family: $rubik, $notoSans;
     color: #333;
     cursor: url(../img/cursor-normal.png), auto;
