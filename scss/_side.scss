@@ -1,0 +1,10 @@
+@import 'reset', 'mixin';
+
+#side {
+    position: absolute;
+    .index {
+        li {
+            cursor: $pointer;
+        }
+    }
+}

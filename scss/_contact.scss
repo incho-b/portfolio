@@ -37,7 +37,7 @@
             position: relative;
             top: -320px;
             transform: rotate(-15deg);
-            // background: #000;
+            background: #000;
             opacity: 0.1;
         }
 
@@ -94,6 +94,7 @@
                 margin: 0 50px;
                 position: relative;
                 z-index: 1;
+                vertical-align: middle;
 
                 img {
                     width: 100%;

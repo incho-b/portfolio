@@ -1,12 +1,18 @@
-@import 'mixin';
+@import 'mixin', 'reset';
 
 /*
-iPad Pro : 1024 * 1366
-iPad : 768 * 1024
-iPhone X : 375 * 812
-iPhone 6~8 Plus : 414 * 736
-iPhone 6~8 : 375 * 667
-Galaxy S5 : 360 * 640
+            Device : Viewport      (Pixel Size)
+          iPad Pro : 1024 * 1366  (2048 * 2732)
+               iPad : 768 * 1024    (1536 * 2048)
+         iPad Mini : 768 * 1024   (768 * 1024)
+         iPhone X : 375 * 812     (1125 * 2436)
+   iPhone X max : 414 * 896     (1242 * 2688)
+iPhone 6~8 Plus : 414 * 736     (1080 * 1920)
+      iPhone 6~8 : 375 * 667     (750 * 1334)
+
+   Galaxy Note 9 : 360 * 740    (1440 * 2960)
+       Galaxy S9+ : 360 * 740    (1440 * 2960)
+         Galaxy S9 : 360 * 740    (1440 * 2960)
 */
 
 /* iPad Pro */
@@ -36,6 +42,7 @@ Galaxy S5 : 360 * 640
             }
         }
     }
+    /* iPad #info */
 
     #wrap {
         #skill {
@@ -60,7 +67,9 @@ Galaxy S5 : 360 * 640
                 }
             }
         }
+        /* iPad #skill */
     }
+    /* iPad #wrap */
 
     #portfolio {
         .port-inner {
@@ -94,7 +103,9 @@ Galaxy S5 : 360 * 640
             }
         }
     }
+    /* iPad #portfolio */
 }
+/* iPad */
 
 /* Mobile */
 @media (max-width: 700px) {
@@ -106,6 +117,7 @@ Galaxy S5 : 360 * 640
             height: 30px;
         }
     }
+    /* Mobile #body-wrap */
 
     #info {
         .info-bg {
@@ -135,11 +147,15 @@ Galaxy S5 : 360 * 640
 
                 .info-box-inner {
                     font-size: 0.7rem;
-                    padding: 60px 0px;
+                    padding: 70px 0px;
+                    line-height: 1.7;
 
                     p {
                         padding: 5px 5px;
 
+                        &:first-child {
+                            margin-bottom: 10px;
+                        }
                         span {
                             &:first-child {
                                 padding-right: 10px;
@@ -150,6 +166,7 @@ Galaxy S5 : 360 * 640
             }
         }
     }
+    /* Mobile #info */
 
     #wrap {
         #skill {
@@ -194,6 +211,7 @@ Galaxy S5 : 360 * 640
                 }
             }
         }
+        /* Mobile #skill */
 
         #portfolio {
             .port-inner {
@@ -211,6 +229,7 @@ Galaxy S5 : 360 * 640
                         transform: scale(0.3) rotate(45deg);
                     }
                 }
+
                 .port-list {
                     top: 130px;
 
@@ -218,6 +237,11 @@ Galaxy S5 : 360 * 640
                         .polaroid {
                             max-width: 100%;
                             height: 150px;
+
+                            &::before {
+                                height: 20px;
+                            }
+                            // tape
 
                             .port-text {
                                 font-size: 0.8rem;
@@ -233,9 +257,75 @@ Galaxy S5 : 360 * 640
                 .tab-btn {
                     top: 20px;
                     width: 80%;
-                    font-size: 0.6rem;
+                    font-size: 0.5rem;
+
+                    li {
+                        span {
+                            padding: 10px 6px 10px 2px;
+                        }
+                    }
+                }
+            }
+        }
+        /* Mobile #portfolio */
+    }
+    /* Mobile #wrap*/
+
+    #contact {
+        .cont-sub {
+            width: 400px;
+            height: 300px;
+            top: 0px;
+            left: calc(50% - 200px);
+
+            &::before {
+                top: 230px;
+            }
+            &::after {
+                top: -130px;
+            }
+
+            .cont-inner {
+                .kakaoqr {
+                    display: none;
+                }
+
+                .cont-text {
+                    li {
+                        span.left {
+                            width: 45%;
+                            font-size: 0.8rem;
+                        }
+
+                        span.right {
+                            width: 55%;
+                            font-size: 0.7rem;
+                        }
+                    }
+
+                    &::before {
+                        transform: scale(0.5);
+                        bottom: -65px;
+                        right: -38px;
+                    }
+
+                    &::after {
+                        border-top-width: 180px;
+                        border-left-width: 90px;
+                        border-right-width: 110px;
+                    }
                 }
             }
         }
     }
+    /* Mobile #contact */
+
+    #loading {
+        .container {
+            .heart {
+                width: 300px;
+            }
+        }
+    }
+    /* Mobile #loading */
 }

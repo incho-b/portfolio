@@ -41,6 +41,8 @@ $(function () {
 $(function () {
     $('.tab-btn li').click(function () {
         $('.port-list li').hide(500);
+        $('.tab-btn li').removeClass('on');
+        $(this).addClass('on');
 
         if ($(this).hasClass('all')) {
             $('.port-list li').fadeIn(1000);
@@ -74,3 +76,63 @@ $(function () {
         $('#popup').hide();
     });
 }); //popup fn
+
+$(function () {
+    // $('#loading').hide();
+
+    // $(window).load(function () {
+    //     clearInterval(loading);
+    // });
+    // $(document).ready(function () {
+    //     // let loading = setInterval(loadHeart);
+    //     // alert('hello world');
+    // });
+
+    // let loading = setInterval(loadHeart);
+
+    // $(document).ready(function () {
+    //     $(window).load(function () {
+    //         loadHeart();
+    //     });
+    // });
+
+    loadHeart();
+
+    function loadHeart() {
+        $('.heart img').css({ opacity: 0 });
+        $('#loading').show();
+        setTimeout(function () {
+            $('.heart1 img').eq(0).animate({ opacity: 1 }, 1000);
+        }, 0);
+        setTimeout(function () {
+            $('.heart1 img').eq(1).animate({ opacity: 1 }, 1000);
+        }, 1000);
+        setTimeout(function () {
+            $('.heart1 img').eq(2).animate({ opacity: 1 }, 1000);
+        }, 2000);
+        setTimeout(function () {
+            $('.heart1 img').eq(3).animate({ opacity: 1 }, 1000);
+        }, 3000);
+
+        setTimeout(function () {
+            $('#loading').animate({ top: '-100vh', opacity: 0 }, 1000);
+        }, 4000);
+
+        // setTimeout(function () {
+        //     $('.heart1 img').hide();
+        //     $('.heart2 img').eq(0).animate({ opacity: 1 }, 1000);
+        // }, 4000);
+        // setTimeout(function () {
+        //     $('.heart2 img').eq(1).animate({ opacity: 1 }, 1000);
+        // }, 5000);
+        // setTimeout(function () {
+        //     $('.heart2 img').eq(2).animate({ opacity: 1 }, 1000);
+        // }, 6000);
+        // setTimeout(function () {
+        //     $('.heart2 img').eq(3).animate({ opacity: 1 }, 1000);
+        // }, 7000);
+        // setTimeout(function () {
+        //     $('#loading').hide();
+        // }, 8000);
+    }
+}); //loading fn

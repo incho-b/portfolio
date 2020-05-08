@@ -63,12 +63,18 @@
                         transition: all 0.5s;
                     }
                 }
+                &.on {
+                    span::before {
+                        left: 0;
+                    }
+                }
 
                 &.all span {
                     &::before {
                         @include liner($liner-bg-color1, $liner-border-color1);
                     }
                 }
+
                 &.copy span {
                     &::before {
                         @include liner($liner-bg-color2, $liner-border-color2);

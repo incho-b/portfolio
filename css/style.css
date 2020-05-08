@@ -560,6 +560,10 @@ body {
   transition: all 0.5s;
 }
 
+#portfolio .port-inner .tab-btn li.on span::before {
+  left: 0;
+}
+
 #portfolio .port-inner .tab-btn li.all span::before {
   padding: 5px;
   background-color: rgba(153, 136, 221, 0.2);
@@ -804,6 +808,7 @@ body {
   top: -320px;
   -webkit-transform: rotate(-15deg);
           transform: rotate(-15deg);
+  background: #000;
   opacity: 0.1;
 }
 
@@ -844,6 +849,7 @@ body {
   margin: 0 50px;
   position: relative;
   z-index: 1;
+  vertical-align: middle;
 }
 
 #contact .cont-sub .cont-inner .kakaoqr img {
@@ -985,4 +991,49 @@ body {
 #popup .pop-inner button.close::after {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+}
+
+#loading {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  overflow: hidden;
+  background: #000;
+}
+
+#loading .container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#loading .container .heart {
+  position: absolute;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 500px;
+}
+
+#loading .container .heart img {
+  width: 25%;
 }
