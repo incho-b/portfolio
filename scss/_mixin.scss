@@ -2,6 +2,7 @@
     margin: 0 auto;
     max-width: 80%;
     height: $page-height;
+    position: relative;
 }
 
 @mixin page-inner($position: relative, $inner-height: 90vh) {
@@ -10,6 +11,7 @@
     background-color: #fff;
     padding-top: 50px;
     position: $position;
+    z-index: 1;
 }
 
 @mixin shadow($color: #555) {
