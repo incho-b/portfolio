@@ -141,6 +141,15 @@ iPhone 6~8 Plus : 414 * 736     (1080 * 1920)
     top: 190px;
   }
   /* iPad #wrap */
+  #portfolio .port-inner .tab-btn {
+    background: #fff;
+    z-index: 10;
+    padding-bottom: 10px;
+    top: 50px;
+    width: 80%;
+    left: calc(50% - 40%);
+    font-size: 1.1rem;
+  }
   #portfolio .port-inner .port-list {
     -ms-grid-columns: repeat(2, 1fr);
     grid-template-columns: repeat(2, 1fr);
@@ -155,14 +164,6 @@ iPhone 6~8 Plus : 414 * 736     (1080 * 1920)
   }
   #portfolio .port-inner .port-list .port-list-sub .polaroid .port-text p {
     margin-top: 2px;
-  }
-  #portfolio .port-inner .tab-btn {
-    background: #fff;
-    z-index: 10;
-    padding-bottom: 10px;
-    top: 50px;
-    width: 80%;
-    left: calc(50% - 40%);
   }
   /* iPad #portfolio */
 }
@@ -320,7 +321,7 @@ iPhone 6~8 Plus : 414 * 736     (1080 * 1920)
   #contact .cont-sub {
     width: 400px;
     height: 300px;
-    top: 0px;
+    top: -50px;
     left: calc(50% - 200px);
   }
   #contact .cont-sub::before {

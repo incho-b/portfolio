@@ -1156,6 +1156,16 @@ body {
           align-items: center;
 }
 
+.side .index li.on span {
+  border-top: 20px solid #f5989d;
+  border-bottom: 20px solid #f5989d;
+  border-left: 0px solid #f5989d;
+}
+
+.side .index li.on p {
+  color: #fff;
+}
+
 .side .index li p {
   position: absolute;
   z-index: 1;

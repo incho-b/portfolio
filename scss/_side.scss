@@ -17,10 +17,21 @@
             display: flex;
             align-items: center;
 
+            &.on span {
+                border-top: 20px solid $hotpink;
+                border-bottom: 20px solid $hotpink;
+                border-left: 0px solid $hotpink;
+            }
+
+            &.on p {
+                color: #fff;
+            }
+
             p {
                 position: absolute;
                 z-index: 1;
             }
+
             span {
                 line-height: 0;
                 width: 100%;
@@ -34,19 +45,6 @@
                 border-right: 20px solid transparent;
                 border-bottom: 20px solid $pink;
                 border-left: 0px solid $pink;
-            }
-
-            &.nav-info {
-                // background: #000;
-            }
-            &.nav-skill {
-                // border-color: $hotpink;
-            }
-            &.nav-portfolio {
-                // background: #000;
-            }
-            &.nav-contact {
-                // background: #fff;
             }
         }
     }

@@ -78,25 +78,8 @@ $(function () {
 }); //popup fn
 
 $(function () {
-    // $('#loading').hide();
-
-    // $(window).load(function () {
-    //     clearInterval(loading);
-    // });
-    // $(document).ready(function () {
-    //     // let loading = setInterval(loadHeart);
-    //     // alert('hello world');
-    // });
-
-    // let loading = setInterval(loadHeart);
-
-    // $(document).ready(function () {
-    //     $(window).load(function () {
-    //         loadHeart();
-    //     });
-    // });
-
-    loadHeart();
+    $('#loading').hide();
+    // loadHeart();
 
     function loadHeart() {
         $('.heart img').css({ opacity: 0 });
@@ -136,3 +119,7 @@ $(function () {
         // }, 8000);
     }
 }); //loading fn
+
+$(function () {
+    $('.index li').click(function () {});
+}); //side btn fn
