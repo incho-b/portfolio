@@ -25,7 +25,8 @@
         }
 
         .skill-list {
-            @include list-layout(repeat(3, 1fr));
+            // @include list-layout(repeat(3, 1fr));
+            @include list-layout;
 
             .skill-sub {
                 position: relative;

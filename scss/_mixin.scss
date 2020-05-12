@@ -51,10 +51,14 @@
     top: calc(100% - 25px);
 }
 
-@mixin list-layout($columns) {
-    display: grid;
-    grid-gap: 1em;
-    @include grid-template-columns($columns);
+// @mixin list-layout($columns) {
+@mixin list-layout {
+    // display: grid;
+    // grid-gap: 1em;
+    // @include grid-template-columns($columns);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     top: 200px;
     padding: 10px;
     margin: 0 auto;
@@ -66,10 +70,10 @@
     box-sizing: border-box;
 }
 
-@mixin grid-template-columns($columns...) {
-    -ms-grid-columns: $columns;
-    grid-template-columns: $columns;
-}
+// @mixin grid-template-columns($columns...) {
+//     -ms-grid-columns: $columns;
+//     grid-template-columns: $columns;
+// }
 
 // @mixin calc($ctop: 50%, $tminus: 50%, $cleft: 50%, $lminus: 50%) {
 //     top: calc($ctop - $tminus);

@@ -373,11 +373,13 @@ body {
 }
 
 #skill .skill-inner .skill-list {
-  display: -ms-grid;
-  display: grid;
-  grid-gap: 1em;
-  -ms-grid-columns: repeat(3, 1fr);
-  grid-template-columns: repeat(3, 1fr);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   top: 200px;
   padding: 10px;
   margin: 0 auto;
@@ -601,11 +603,13 @@ body {
 }
 
 #portfolio .port-inner .port-list {
-  display: -ms-grid;
-  display: grid;
-  grid-gap: 1em;
-  -ms-grid-columns: repeat(2, 1fr);
-  grid-template-columns: repeat(2, 1fr);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   top: 200px;
   padding: 10px;
   margin: 0 auto;
@@ -617,10 +621,8 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   overflow-y: scroll;
-  background: #fde;
-  padding-top: 10px;
-  border-top: 30px solid #fde;
-  border-bottom: 30px solid #fde;
+  border-top: 30px solid #fff;
+  border-bottom: 30px solid #fff;
   -webkit-box-shadow: 5px 5px 5px #ddd;
           box-shadow: 5px 5px 5px #ddd;
 }
@@ -628,7 +630,8 @@ body {
 #portfolio .port-inner .port-list .port-list-sub {
   position: relative;
   text-align: center;
-  width: 100%;
+  width: 40%;
+  margin: 3% 5%;
 }
 
 #portfolio .port-inner .port-list .port-list-sub .polatape {
@@ -1134,10 +1137,10 @@ body {
 }
 
 .side {
-  width: 120px;
+  width: 140px;
   position: absolute;
   top: 20px;
-  right: -120px;
+  right: -140px;
 }
 
 .side .index li {
@@ -1154,6 +1157,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-transform: uppercase;
 }
 
 .side .index li.on span {

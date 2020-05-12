@@ -121,5 +121,10 @@ $(function () {
 }); //loading fn
 
 $(function () {
-    $('.index li').click(function () {});
+    // $('.nav-info').click(function () {
+    //     $(window).scrollTop(0);
+    // });
+    // $('.nav-skill').click(function () {
+    //     $(window).scrollTop(0);
+    // });
 }); //side btn fn

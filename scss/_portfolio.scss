@@ -96,18 +96,20 @@
         }
 
         .port-list {
-            @include list-layout(repeat(2, 1fr));
+            // @include list-layout(repeat(2, 1fr));
+            @include list-layout;
             overflow-y: scroll;
-            background: $pink;
-            padding-top: 10px;
-            border-top: 30px solid $pink;
-            border-bottom: 30px solid $pink;
+            // background: $pink;
+            // box-sizing: border-box;
+            border-top: 30px solid #fff;
+            border-bottom: 30px solid #fff;
             @include shadow(#ddd);
 
             .port-list-sub {
                 position: relative;
                 text-align: center;
-                width: 100%;
+                width: 40%;
+                margin: 3% 5%;
 
                 .polatape {
                     width: 70%;
