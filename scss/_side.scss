@@ -4,7 +4,8 @@
     width: 140px;
     position: absolute;
     top: 20px;
-    right: -140px;
+    right: -110px;
+    text-align: right;
 
     .index {
         li {
@@ -18,20 +19,33 @@
             display: flex;
             align-items: center;
             text-transform: uppercase;
+            text-align: right;
+
+            &.on {
+                left: 20px;
+                text-align: right;
+            }
 
             &.on span {
                 border-top: 20px solid $hotpink;
                 border-bottom: 20px solid $hotpink;
                 border-left: 0px solid $hotpink;
+                text-align: right;
             }
 
             &.on p {
                 color: #fff;
+                text-align: right;
+                font-size: 0.9rem;
             }
 
             p {
                 position: absolute;
+                font-size: 0.8rem;
                 z-index: 1;
+                text-align: right;
+                width: calc(100% - 50px);
+                // border: 1px solid red;
             }
 
             span {
