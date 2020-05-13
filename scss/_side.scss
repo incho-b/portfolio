@@ -33,18 +33,19 @@
                 text-align: right;
             }
 
-            &.on p {
+            &.on a {
                 color: #fff;
                 text-align: right;
                 font-size: 0.9rem;
             }
 
-            p {
+            a {
                 position: absolute;
                 font-size: 0.8rem;
                 z-index: 1;
                 text-align: right;
                 width: calc(100% - 50px);
+                color: #333;
                 // border: 1px solid red;
             }
 

@@ -41,8 +41,8 @@
 
     <body>
         <div id="body-wrap">
-            <section id="info">
-                <div class="info-bg">
+            <section id="info" class="section">
+                <div class="info-bg section-inner">
                     <div class="info-inner">
                         <div class="circle box-shadow">
                             <div class="circle-inner">
@@ -87,8 +87,8 @@
             <!-- #info -->
 
             <div id="wrap">
-                <section id="skill">
-                    <div class="skill-inner box-shadow">
+                <section id="skill" class="section">
+                    <div class="skill-inner section-inner box-shadow">
                         <div class="title skill-title">
                             <p>SKILL</p>
                             <div class="underline"></div>
@@ -268,19 +268,19 @@
                     <div class="side">
                         <ul class="index">
                             <li class="nav-info">
-                                <p>info</p>
+                                <a href="#info">info</a>
                                 <span></span>
                             </li>
                             <li class="nav-skill on">
-                                <p>skill</p>
+                                <a href="#skill">skill</a>
                                 <span></span>
                             </li>
                             <li class="nav-portfolio">
-                                <p>portfolio</p>
+                                <a href="#portfolio">portfolio</a>
                                 <span></span>
                             </li>
                             <li class="nav-contact">
-                                <p>contact</p>
+                                <a href="#contact">contact</a>
                                 <span></span>
                             </li>
                         </ul>
@@ -289,8 +289,8 @@
                 </section>
                 <!-- #skill -->
 
-                <section id="portfolio">
-                    <div class="port-inner box-shadow">
+                <section id="portfolio" class="section">
+                    <div class="port-inner section-inner box-shadow">
                         <div class="title port-title">
                             <p>portfolio</p>
                             <div class="underline"></div>
@@ -318,7 +318,8 @@
                                             <span class="port-th-sub">
                                                 <p>
                                                     브랜드디자인<br />
-                                                    반응형
+                                                    반응형<br />
+                                                    팀프로젝트
                                                 </p>
                                             </span>
                                         </div>
@@ -548,9 +549,9 @@
             </div>
             <!-- #wrap -->
 
-            <section id="contact">
-                <div class="cont-bg"></div>
-                <div class="cont-sub">
+            <section id="contact" class="section">
+                <div class="cont-bg section-inner"></div>
+                <div class="cont-sub section-inner">
                     <div class="cont-inner box-shadow">
                         <!-- <hr /> -->
                         <!-- <div class="title">
@@ -617,6 +618,24 @@
             </div>
         </div>
         <!-- #popup -->
+
+        <div id="notice">
+            <div class="notice-bg">
+                <img src="img/sticky-memo4-1.png" alt="" />
+            </div>
+            <div class="notice-inner">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum dolore consectetur atque fugit nisi quae est veritatis magnam, ullam itaque autem illum! Et earum, maiores iste
+                quibusdam ea eaque eum!
+            </div>
+
+            <svg class="notice-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="none" d="M0 0h24v24H0z" />
+                <path
+                    d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm0-9.414l2.828-2.829 1.415 1.415L13.414 12l2.829 2.828-1.415 1.415L12 13.414l-2.828 2.829-1.415-1.415L10.586 12 7.757 9.172l1.415-1.415L12 10.586z"
+                />
+            </svg>
+        </div>
+        <!-- #notice - popup -->
 
         <!--Start of Tawk.to Script-->
         <script type="text/javascript">

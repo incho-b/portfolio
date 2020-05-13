@@ -26,7 +26,7 @@
 
         .skill-list {
             // @include list-layout(repeat(3, 1fr));
-            @include list-layout;
+            @include list-layout(150px);
 
             .skill-sub {
                 position: relative;
@@ -92,7 +92,7 @@
                     width: 150px;
                     font-size: 1.3rem;
                     font-weight: bolder;
-                    top: 230px;
+                    top: 200px;
                     left: calc(50% - 75px);
                 }
             }

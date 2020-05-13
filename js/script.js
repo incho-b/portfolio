@@ -4,7 +4,9 @@ $(function () {
     $(window).scroll(function () {
         console.log($(window).scrollTop());
 
-        if ($(window).scrollTop() > 400 && $(window).scrollTop() < 1900) {
+        if ($(window).scrollTop() > 10) {
+            $('#notice').css({ opacity: 0.5 });
+        } else if ($(window).scrollTop() > 400 && $(window).scrollTop() < 1900) {
             // $('.graph').addClass('on');
 
             setTimeout(function () {
@@ -30,6 +32,7 @@ $(function () {
             }, 3000);
         } else {
             $('.graph').removeClass('on');
+            $('#notice').css({ opacity: 1 });
         }
     });
 
@@ -121,10 +124,8 @@ $(function () {
 }); //loading fn
 
 $(function () {
-    // $('.nav-info').click(function () {
-    //     $(window).scrollTop(0);
-    // });
-    // $('.nav-skill').click(function () {
-    //     $(window).scrollTop(0);
-    // });
+    $('.side li').hover(function () {
+        $('.side li').removeClass('on');
+        $(this).toggleClass('on');
+    });
 }); //side btn fn

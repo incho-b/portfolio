@@ -201,6 +201,8 @@ body {
   height: 100vh;
   position: absolute;
   left: calc(50% - 600px);
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }
 
 #info .info-bg .circle {
@@ -381,7 +383,7 @@ body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  top: 200px;
+  top: 150px;
   padding: 10px;
   margin: 0 auto;
   justify-items: center;
@@ -467,7 +469,7 @@ body {
   width: 150px;
   font-size: 1.3rem;
   font-weight: bolder;
-  top: 230px;
+  top: 200px;
   left: calc(50% - 75px);
 }
 
@@ -732,16 +734,19 @@ body {
   height: 100%;
   background: #000;
   position: absolute;
-  top: 0;
-  left: -100%;
   z-index: 5;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-  opacity: 0.5;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  opacity: 0;
 }
 
 #portfolio .port-inner .port-list .port-list-sub .polaroid .port-thum:hover::before {
-  left: 0;
+  opacity: 0.5;
+}
+
+#portfolio .port-inner .port-list .port-list-sub .polaroid .port-thum:hover img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 #portfolio .port-inner .port-list .port-list-sub .polaroid .port-thum:hover .port-th-sub {
@@ -752,6 +757,8 @@ body {
 #portfolio .port-inner .port-list .port-list-sub .polaroid .port-thum img {
   width: 100%;
   float: left;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 #portfolio .port-inner .port-list .port-list-sub .polaroid .port-text {
@@ -773,7 +780,7 @@ body {
 /* #contact */
 #contact {
   max-width: 100vw;
-  height: 70vh;
+  height: 80vh;
   background: url(../img/papertear_bg2.png) top;
   background-size: cover;
   position: relative;
@@ -787,7 +794,7 @@ body {
   max-width: 800px;
   height: 600px;
   position: relative;
-  top: -200px;
+  top: calc(50% - 500px);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -1176,18 +1183,19 @@ body {
   text-align: right;
 }
 
-.side .index li.on p {
+.side .index li.on a {
   color: #fff;
   text-align: right;
   font-size: 0.9rem;
 }
 
-.side .index li p {
+.side .index li a {
   position: absolute;
   font-size: 0.8rem;
   z-index: 1;
   text-align: right;
   width: calc(100% - 50px);
+  color: #333;
 }
 
 .side .index li span {
@@ -1203,4 +1211,127 @@ body {
   border-right: 20px solid transparent;
   border-bottom: 20px solid #fde;
   border-left: 0px solid #fde;
+}
+
+/* RESET */
+a {
+  text-decoration: none;
+  color: #333;
+  cursor: url(../img/cursor-pointer.png), auto;
+}
+
+.clearfix::before,
+.clearfix::after {
+  clear: both;
+  content: '';
+  display: block;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+/* color */
+/* font-family */
+/* bold */
+/* handwrite */
+/* korean */
+/* background */
+body {
+  width: 100vw;
+  font-family: "Rubik", sans-serif, "Noto Sans KR", sans-serif;
+  color: #333;
+  cursor: url(../img/cursor-normal.png), auto;
+}
+
+/* #body-wrap */
+#body-wrap {
+  max-width: 100vw;
+  background: url(../img/20grid_bg.png);
+  text-shadow: none;
+}
+
+#body-wrap .box-shadow {
+  -webkit-box-shadow: 5px 5px 5px #555;
+          box-shadow: 5px 5px 5px #555;
+}
+
+#body-wrap .liner {
+  padding: 5px;
+  background-color: rgba(153, 136, 221, 0.2);
+  border-right: 5px solid rgba(153, 136, 221, 0.3);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#body-wrap .title {
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bolder;
+  position: relative;
+  text-transform: uppercase;
+}
+
+#body-wrap .title p {
+  width: 100%;
+  position: absolute;
+  left: calc(50% - 50%);
+  top: 0;
+  z-index: 1;
+}
+
+#body-wrap .underline {
+  width: 80%;
+  height: 50px;
+  background: url(../img/underline.png) repeat-x bottom;
+  position: absolute;
+  left: calc(50% - 40%);
+  top: calc(100% - 25px);
+}
+
+/* #wrap */
+#wrap {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+#notice {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 100;
+  opacity: 1;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+#notice .notice-bg {
+  position: relative;
+}
+
+#notice .notice-inner {
+  position: absolute;
+  top: 140px;
+  left: 80px;
+  width: calc(100% - 160px);
+  height: calc(100% - 200px);
+  color: #1b587c;
+  text-shadow: none;
+}
+
+#notice .notice-button {
+  position: absolute;
+  top: 100px;
+  right: 50px;
+  width: 40px;
+  height: 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  fill: #98d;
 }
