@@ -197,10 +197,10 @@ body {
 
 #info .info-bg .info-inner {
   margin: 0 auto;
-  width: 1200px;
+  width: 100%;
   height: 100vh;
   position: absolute;
-  left: calc(50% - 600px);
+  left: calc(50% - 50%);
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
 }
@@ -780,7 +780,7 @@ body {
 /* #contact */
 #contact {
   max-width: 100vw;
-  height: 80vh;
+  height: 90vh;
   background: url(../img/papertear_bg2.png) top;
   background-size: cover;
   position: relative;
@@ -940,6 +940,15 @@ body {
   border-right: 200px solid transparent;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+#footer {
+  position: absolute;
+  bottom: 30px;
+  right: 100px;
+  text-align: right;
+  font-size: 0.8rem;
+  color: #555;
 }
 
 #popup {
@@ -1196,6 +1205,8 @@ body {
   text-align: right;
   width: calc(100% - 50px);
   color: #333;
+  display: block;
+  z-index: 5;
 }
 
 .side .index li span {
@@ -1312,6 +1323,12 @@ body {
 }
 
 #notice .notice-bg {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+
+#notice .notice-img {
   position: relative;
 }
 

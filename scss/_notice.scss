@@ -9,6 +9,12 @@
     transition: opacity 0.5s;
 
     .notice-bg {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .notice-img {
         position: relative;
     }
 

@@ -124,8 +124,19 @@ $(function () {
 }); //loading fn
 
 $(function () {
-    $('.side li').hover(function () {
-        $('.side li').removeClass('on');
-        $(this).toggleClass('on');
+    // $('.side li').hover(function () {
+    //     $('.side li').removeClass('on');
+    //     $(this).toggleClass('on');
+    // });
+
+    $('.side a').click(function () {
+        console.log($(this));
     });
 }); //side btn fn
+
+$(function () {
+    $('#notice').draggable();
+    $('#notice .notice-button, .notice-bg').click(function () {
+        $('#notice').hide();
+    });
+}); // #notice - popup fn

@@ -46,6 +46,8 @@
                 text-align: right;
                 width: calc(100% - 50px);
                 color: #333;
+                display: block;
+                z-index: 5;
                 // border: 1px solid red;
             }
 
