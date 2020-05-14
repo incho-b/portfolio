@@ -27,11 +27,14 @@
         .skill-list {
             // @include list-layout(repeat(3, 1fr));
             @include list-layout(150px);
+            align-items: center;
 
             .skill-sub {
                 position: relative;
                 margin: 10px auto;
                 text-align: center;
+                display: flex;
+                justify-content: space-around;
 
                 .graph {
                     width: 200px;

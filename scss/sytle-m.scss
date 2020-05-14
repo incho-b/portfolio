@@ -56,9 +56,12 @@ iPhone 6~8 Plus : 414 * 736     (1080 * 1920)
 
             .skill-list {
                 // @include grid-template-columns(repeat(2, 1fr));
+
                 top: 120px;
 
                 .skill-sub {
+                    width: 50%;
+
                     .graph {
                         transform: scale(0.7);
                     }
@@ -92,10 +95,11 @@ iPhone 6~8 Plus : 414 * 736     (1080 * 1920)
 
                 .port-list-sub {
                     width: 100%;
+                    height: 50%;
 
                     .polaroid {
                         max-width: 100%;
-                        height: 200px;
+                        height: 100%;
 
                         .port-text {
                             bottom: 3%;
@@ -131,6 +135,18 @@ iPhone 6~8 Plus : 414 * 736     (1080 * 1920)
                 font-size: 0;
                 transform: rotate(-90deg);
                 width: 100%;
+
+                &.on {
+                    left: 0;
+
+                    a {
+                        font-size: 0;
+                    }
+                }
+
+                a {
+                    font-size: 0;
+                }
             }
         }
     }

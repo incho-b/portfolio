@@ -136,6 +136,9 @@ iPhone 6~8 Plus : 414 * 736     (1080 * 1920)
   #skill .skill-inner .skill-list {
     top: 120px;
   }
+  #skill .skill-inner .skill-list .skill-sub {
+    width: 50%;
+  }
   #skill .skill-inner .skill-list .skill-sub .graph {
     -webkit-transform: scale(0.7);
             transform: scale(0.7);
@@ -166,10 +169,11 @@ iPhone 6~8 Plus : 414 * 736     (1080 * 1920)
   }
   #portfolio .port-inner .port-list .port-list-sub {
     width: 100%;
+    height: 50%;
   }
   #portfolio .port-inner .port-list .port-list-sub .polaroid {
     max-width: 100%;
-    height: 200px;
+    height: 100%;
   }
   #portfolio .port-inner .port-list .port-list-sub .polaroid .port-text {
     bottom: 3%;
@@ -202,6 +206,15 @@ iPhone 6~8 Plus : 414 * 736     (1080 * 1920)
     -webkit-transform: rotate(-90deg);
             transform: rotate(-90deg);
     width: 100%;
+  }
+  .side .index li.on {
+    left: 0;
+  }
+  .side .index li.on a {
+    font-size: 0;
+  }
+  .side .index li a {
+    font-size: 0;
   }
   /* iPad .side*/
 }

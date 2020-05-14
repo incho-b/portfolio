@@ -1,0 +1,106 @@
+@import 'reset', 'mixin';
+
+#portfolio-popup {
+    margin: 0 auto;
+    width: 80vw;
+    height: 90vh;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 50px;
+    box-sizing: border-box;
+    background: #eee;
+
+    .pp-sub {
+        width: 50%;
+        height: 100%;
+        box-sizing: border-box;
+
+        &.pp-sub-img {
+            img {
+                width: 100%;
+            }
+        }
+        //.pp-sub-img
+
+        &.pp-sub-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .pp-sub-inner {
+                width: 60%;
+                padding: 50px;
+                // border: 1px solid red;
+
+                .pp-title {
+                    font-size: 2rem;
+                    font-weight: bolder;
+                    text-align: center;
+                }
+                //.pp-title
+
+                .pp-subtitle {
+                    text-align: center;
+                    line-height: 2;
+                    font-size: 1.2rem;
+                    font-weight: lighter;
+                }
+                //.pp-subtitle
+
+                .pp-sub-text {
+                    font-size: 1rem;
+                    font-weight: lighter;
+                    line-height: 1.5;
+                    margin: 50px 0;
+                }
+                //.pp-sub-text
+
+                .pp-subtext {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    line-height: 2;
+
+                    .pp-subtext-title {
+                        font-weight: bolder;
+                        font-size: 1.1rem;
+                    }
+                    .pp-subtext-sub {
+                    }
+                }
+                //.pp-subtext
+
+                .pp-button {
+                    display: flex;
+                    justify-content: space-around;
+
+                    .pp-button-view {
+                        display: block;
+                        width: 100px;
+                        height: 30px;
+                        line-height: 30px;
+                        text-align: center;
+                        padding: 5px 10px;
+                        border: 3px solid skyblue;
+                        color: skyblue;
+                        margin-top: 30px;
+
+                        &.view-website {
+                        }
+                        &.view-code {
+                        }
+                    }
+                    //.pp-button-view
+                }
+                //.pp-button
+            }
+            //.pp-sub-inner
+        }
+        //.pp-sub-wrap
+    }
+
+    .pp-button-close {
+    }
+}

@@ -9,7 +9,7 @@
         <meta property="og:description" content="안녕하세요, 백인초의 포트폴리오 입니다." />
         <meta property="og:image" content="http://incho.dothome.co.kr/incho/img/pen1.png" />
 
-        <title>INCHO : WEB DESIGNER</title>
+        <title>PORTFOLIO</title>
 
         <!-- Header Icon -->
         <link rel="shortcut icon" href="img/pen1.ico" type="image/x-icon" />
@@ -22,8 +22,8 @@
         <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 
         <!-- MOBILE - jQuery code -->
-        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <!-- <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
 
         <!-- MOBILE - CSS -->
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
@@ -39,5 +39,55 @@
         <script type="text/javascript" src="js/script.js"></script>
     </head>
 
-    <body></body>
+    <body>
+        <div id="portfolio-popup">
+            <div class="pp-sub pp-sub-img">
+                <img src="img/penguni.png" alt="" />
+            </div>
+            <!-- .pp-sub.pp-sub-img -->
+
+            <div class="pp-sub pp-sub-wrap">
+                <div class="pp-sub-inner">
+                    <h1 class="pp-title">title</h1>
+                    <!-- .pp-title -->
+                    <h2 class="pp-subtitle">subtitle</h2>
+                    <!-- .pp-subtitle -->
+                    <div class="pp-sub-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea eos, officia repellendus corrupti quam quo. Eos, deleniti itaque impedit ullam illo asperiores delectus quos
+                        corrupti fuga soluta quam consequatur distinctio.
+                    </div>
+                    <!-- .pp-sub-text -->
+                    <ul class="pp-subtext">
+                        <li class="pp-subtext-title">기간</li>
+                        <li class="pp-subtext-sub">2019.12 (2주)</li>
+                    </ul>
+                    <!-- .pp-subtext -->
+                    <ul class="pp-subtext">
+                        <li class="pp-subtext-title">참여도</li>
+                        <li class="pp-subtext-sub">기획 100%, 디자인 100%, 퍼블리싱 100%</li>
+                    </ul>
+                    <!-- .pp-subtext -->
+                    <ul class="pp-subtext">
+                        <li class="pp-subtext-title">툴</li>
+                        <li class="pp-subtext-sub">html, scss, jQuery, photoshop, illustrator</li>
+                    </ul>
+                    <!-- .pp-subtext -->
+                    <div class="pp-button">
+                        <a href="" class="pp-button-view view-website">view website</a>
+                        <a href="" class="pp-button-view view-code">view code</a>
+                    </div>
+                </div>
+                <!-- .pp-text-inner -->
+            </div>
+            <!-- .pp-sub.pp-sub-wrap -->
+
+            <div class="pp-button-close"></div>
+            <!-- .pp-button-close -->
+        </div>
+        <!-- #portfolio-popup -->
+
+        <script>
+            $(function () {});
+        </script>
+    </body>
 </html>
