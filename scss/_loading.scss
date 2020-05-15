@@ -6,7 +6,7 @@
     left: 0;
     z-index: 999;
     overflow: hidden;
-    background: #000;
+    background: #12425b;
 
     .container {
         position: absolute;
@@ -23,6 +23,8 @@
             position: absolute;
             justify-content: center;
             display: flex;
+
+            flex-direction: row-reverse;
             width: 500px;
             // border: 1px solid red;
 

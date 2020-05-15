@@ -6,7 +6,8 @@ $(function () {
 
         if ($(window).scrollTop() > 10) {
             $('#notice').css({ opacity: 0.5 });
-        } else if ($(window).scrollTop() > 400 && $(window).scrollTop() < 1900) {
+        }
+        if ($(window).scrollTop() > 400 && $(window).scrollTop() < 1900) {
             // $('.graph').addClass('on');
 
             setTimeout(function () {
@@ -60,13 +61,13 @@ $(function () {
 }); //portfolio fn
 
 $(function () {
-    $('#popup').hide();
+    $('#portfolio-img-popup').hide();
 
     $('.port-list .etc').click(function (e) {
         e.preventDefault();
-        $('#popup').show();
+        $('#portfolio-img-popup').show();
 
-        let $hwatoo = $(this).find('.polaroid');
+        // let $hwatoo = $(this).find('.polaroid');
         let path = $(this).find('a').attr('href');
 
         if (path != $('.pop-inner img').attr('src')) {
@@ -75,10 +76,10 @@ $(function () {
             // }
         }
     });
-    $('#popup .close, .pop-bg').click(function () {
-        $('#popup').hide();
+    $('#portfolio-img-popup .close, .pop-bg').click(function () {
+        $('#portfolio-img-popup').hide();
     });
-}); //popup fn
+}); //portfolio-img-popup fn
 
 $(function () {
     $('#loading').hide();
@@ -88,21 +89,37 @@ $(function () {
         $('.heart img').css({ opacity: 0 });
         $('#loading').show();
         setTimeout(function () {
-            $('.heart1 img').eq(0).animate({ opacity: 1 }, 1000);
+            $('.heart1 img').eq(3).animate({ opacity: 1 }, 1000);
         }, 0);
         setTimeout(function () {
-            $('.heart1 img').eq(1).animate({ opacity: 1 }, 1000);
+            $('.heart1 img').eq(2).animate({ opacity: 1 }, 1000);
         }, 1000);
         setTimeout(function () {
-            $('.heart1 img').eq(2).animate({ opacity: 1 }, 1000);
+            $('.heart1 img').eq(1).animate({ opacity: 1 }, 1000);
         }, 2000);
         setTimeout(function () {
-            $('.heart1 img').eq(3).animate({ opacity: 1 }, 1000);
+            $('.heart1 img').eq(0).animate({ opacity: 1 }, 1000);
         }, 3000);
 
         setTimeout(function () {
             $('#loading').animate({ top: '-100vh', opacity: 0 }, 1000);
         }, 4000);
+        // setTimeout(function () {
+        //     $('.heart1 img').eq(0).animate({ opacity: 1 }, 1000);
+        // }, 0);
+        // setTimeout(function () {
+        //     $('.heart1 img').eq(1).animate({ opacity: 1 }, 1000);
+        // }, 1000);
+        // setTimeout(function () {
+        //     $('.heart1 img').eq(2).animate({ opacity: 1 }, 1000);
+        // }, 2000);
+        // setTimeout(function () {
+        //     $('.heart1 img').eq(3).animate({ opacity: 1 }, 1000);
+        // }, 3000);
+
+        // setTimeout(function () {
+        //     $('#loading').animate({ top: '-100vh', opacity: 0 }, 1000);
+        // }, 4000);
 
         // setTimeout(function () {
         //     $('.heart1 img').hide();
@@ -136,7 +153,48 @@ $(function () {
 
 $(function () {
     $('#notice').draggable();
-    $('#notice .notice-button, .notice-bg').click(function () {
+    $('.notice-button').click(function () {
         $('#notice').hide();
     });
 }); // #notice - popup fn
+
+$(function () {
+    $('.polaroid a').click(function (e) {
+        e.preventDefault();
+    });
+
+    $('.pp-bg').hide();
+    $('.port-list-sub.design .port-thum, .port-list-sub.copy .port-thum').click(function () {
+        $('.portfolio-popup-inner').hide();
+
+        if ($(this).parents('.port-list-sub').hasClass('web-fairy')) {
+            $('#portfolio-popup .portfolio-popup-inner.web-fairy').show();
+        } else if ($(this).parents('.port-list-sub').hasClass('web-mungdo')) {
+            $('#portfolio-popup .portfolio-popup-inner.web-mungdo').show();
+        } else if ($(this).parents('.port-list-sub').hasClass('web-penguni')) {
+            $('#portfolio-popup .portfolio-popup-inner.web-penguni').show();
+        } else if ($(this).parents('.port-list-sub').hasClass('web-preciosa')) {
+            $('#portfolio-popup .portfolio-popup-inner.web-preciosa').show();
+        } else if ($(this).parents('.port-list-sub').hasClass('web-a-chon')) {
+            $('#portfolio-popup .portfolio-popup-inner.web-a-chon').show();
+        } else if ($(this).parents('.port-list-sub').hasClass('web-pizzahut')) {
+            $('#portfolio-popup .portfolio-popup-inner.web-pizzahut').show();
+        } else if ($(this).parents('.port-list-sub').hasClass('web-hanatour')) {
+            $('#portfolio-popup .portfolio-popup-inner.web-hanatour').show();
+        } else if ($(this).parents('.port-list-sub').hasClass('web-medicalog')) {
+            $('#portfolio-popup .portfolio-popup-inner.web-medicalog').show();
+        }
+
+        $('#portfolio-popup').animate({ top: 0 });
+        $('.pp-bg').fadeIn();
+    });
+
+    $('.pp-bg').click(function () {
+        $('#portfolio-popup').animate({ top: '100%' });
+        $('.pp-bg').hide();
+    });
+    $('.pp-button-close').click(function () {
+        $('#portfolio-popup').animate({ top: '100%' });
+        $('.pp-bg').fadeOut();
+    });
+}); //#portfolio - popup fn

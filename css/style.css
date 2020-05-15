@@ -637,6 +637,7 @@ body {
   position: relative;
   text-align: center;
   width: 40%;
+  height: 50%;
   margin: 3% 5%;
 }
 
@@ -666,7 +667,6 @@ body {
 
 #portfolio .port-inner .port-list .port-list-sub .polaroid {
   margin: 10px auto;
-  max-width: 80%;
   height: 300px;
   position: relative;
   border: 1px solid #eee;
@@ -698,11 +698,15 @@ body {
   height: 60%;
   position: absolute;
   left: calc(50% - 40%);
-  top: 10%;
+  top: 15%;
   overflow: hidden;
   border: 1px solid #ddd;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #portfolio .port-inner .port-list .port-list-sub .polaroid .port-thum .port-th-sub {
@@ -958,7 +962,7 @@ body {
   font-weight: bolder;
 }
 
-#popup {
+#portfolio-img-popup {
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -967,14 +971,14 @@ body {
   z-index: 10000;
 }
 
-#popup .pop-bg {
+#portfolio-img-popup .pop-bg {
   position: absolute;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.2);
 }
 
-#popup .pop-inner {
+#portfolio-img-popup .pop-inner {
   width: 60%;
   height: 60%;
   background: #fff;
@@ -993,7 +997,7 @@ body {
           justify-content: center;
 }
 
-#popup .pop-inner button.close {
+#portfolio-img-popup .pop-inner button.close {
   width: 50px;
   height: 50px;
   position: absolute;
@@ -1007,7 +1011,7 @@ body {
           box-sizing: border-box;
 }
 
-#popup .pop-inner button.close::before, #popup .pop-inner button.close::after {
+#portfolio-img-popup .pop-inner button.close::before, #portfolio-img-popup .pop-inner button.close::after {
   content: '';
   display: block;
   width: 2px;
@@ -1018,12 +1022,12 @@ body {
   right: calc(50% - 0px);
 }
 
-#popup .pop-inner button.close::before {
+#portfolio-img-popup .pop-inner button.close::before {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
 
-#popup .pop-inner button.close::after {
+#portfolio-img-popup .pop-inner button.close::after {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
@@ -1036,7 +1040,7 @@ body {
   left: 0;
   z-index: 999;
   overflow: hidden;
-  background: #000;
+  background: #12425b;
 }
 
 #loading .container {
@@ -1066,6 +1070,10 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
   width: 500px;
 }
 
@@ -1323,7 +1331,7 @@ body {
   position: fixed;
   top: 20px;
   left: 20px;
-  z-index: 100;
+  z-index: 99;
   opacity: 1;
   -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
@@ -1449,10 +1457,35 @@ body {
 }
 
 #portfolio-popup {
-  margin: 0 auto;
-  width: 80vw;
-  height: 90vh;
-  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  z-index: 99;
+}
+
+#portfolio-popup .pp-bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 99;
+}
+
+#portfolio-popup .portfolio-popup-inner {
+  background: #fff;
+  width: 70vw;
+  height: 80vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1464,21 +1497,16 @@ body {
   padding: 50px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background: #eee;
+  position: relative;
+  z-index: 100;
 }
 
-#portfolio-popup .pp-sub {
+#portfolio-popup .portfolio-popup-inner .pp-sub {
   width: 50%;
   height: 100%;
+  overflow: hidden;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-}
-
-#portfolio-popup .pp-sub.pp-sub-img img {
-  width: 100%;
-}
-
-#portfolio-popup .pp-sub.pp-sub-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1490,32 +1518,37 @@ body {
           justify-content: center;
 }
 
-#portfolio-popup .pp-sub.pp-sub-wrap .pp-sub-inner {
-  width: 60%;
+#portfolio-popup .portfolio-popup-inner .pp-sub.pp-sub-img img {
+  width: 100%;
+}
+
+#portfolio-popup .portfolio-popup-inner .pp-sub.pp-sub-wrap .pp-sub-inner {
+  width: 80%;
   padding: 50px;
 }
 
-#portfolio-popup .pp-sub.pp-sub-wrap .pp-sub-inner .pp-title {
+#portfolio-popup .portfolio-popup-inner .pp-sub.pp-sub-wrap .pp-sub-inner .pp-title {
   font-size: 2rem;
   font-weight: bolder;
   text-align: center;
+  text-transform: uppercase;
 }
 
-#portfolio-popup .pp-sub.pp-sub-wrap .pp-sub-inner .pp-subtitle {
+#portfolio-popup .portfolio-popup-inner .pp-sub.pp-sub-wrap .pp-sub-inner .pp-subtitle {
   text-align: center;
   line-height: 2;
   font-size: 1.2rem;
   font-weight: lighter;
 }
 
-#portfolio-popup .pp-sub.pp-sub-wrap .pp-sub-inner .pp-sub-text {
+#portfolio-popup .portfolio-popup-inner .pp-sub.pp-sub-wrap .pp-sub-inner .pp-sub-text {
   font-size: 1rem;
   font-weight: lighter;
   line-height: 1.5;
   margin: 50px 0;
 }
 
-#portfolio-popup .pp-sub.pp-sub-wrap .pp-sub-inner .pp-subtext {
+#portfolio-popup .portfolio-popup-inner .pp-sub.pp-sub-wrap .pp-sub-inner .pp-subtext {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1527,12 +1560,12 @@ body {
   line-height: 2;
 }
 
-#portfolio-popup .pp-sub.pp-sub-wrap .pp-sub-inner .pp-subtext .pp-subtext-title {
+#portfolio-popup .portfolio-popup-inner .pp-sub.pp-sub-wrap .pp-sub-inner .pp-subtext .pp-subtext-title {
   font-weight: bolder;
   font-size: 1.1rem;
 }
 
-#portfolio-popup .pp-sub.pp-sub-wrap .pp-sub-inner .pp-button {
+#portfolio-popup .portfolio-popup-inner .pp-sub.pp-sub-wrap .pp-sub-inner .pp-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1540,14 +1573,65 @@ body {
       justify-content: space-around;
 }
 
-#portfolio-popup .pp-sub.pp-sub-wrap .pp-sub-inner .pp-button .pp-button-view {
+#portfolio-popup .portfolio-popup-inner .pp-sub.pp-sub-wrap .pp-sub-inner .pp-button .pp-button-view {
   display: block;
-  width: 100px;
-  height: 30px;
-  line-height: 30px;
+  width: 120px;
+  height: 40px;
   text-align: center;
   padding: 5px 10px;
   border: 3px solid skyblue;
   color: skyblue;
-  margin-top: 30px;
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+#portfolio-popup .portfolio-popup-inner .pp-sub.pp-sub-wrap .pp-sub-inner .pp-button .pp-button-view:hover {
+  background: skyblue;
+  color: #fff;
+}
+
+#portfolio-popup .portfolio-popup-inner .pp-button-close svg {
+  width: 64px;
+  height: 64px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  fill: skyblue;
+}
+
+#portfolio-popup .portfolio-popup-inner .pp-button-close svg:hover {
+  -webkit-animation: spin 0.5s;
+          animation: spin 0.5s;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
 }
