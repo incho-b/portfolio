@@ -6,7 +6,10 @@ $(function () {
 
         if ($(window).scrollTop() > 10) {
             $('#notice').css({ opacity: 0.5 });
+        } else {
+            $('#notice').css({ opacity: 1 });
         }
+
         if ($(window).scrollTop() > 400 && $(window).scrollTop() < 1900) {
             // $('.graph').addClass('on');
 
@@ -33,7 +36,6 @@ $(function () {
             }, 3000);
         } else {
             $('.graph').removeClass('on');
-            $('#notice').css({ opacity: 1 });
         }
     });
 
@@ -57,6 +59,10 @@ $(function () {
         } else if ($(this).hasClass('etc')) {
             $('.port-list .etc').fadeIn(1000);
         }
+    });
+
+    $('.polaroid a').click(function (e) {
+        e.preventDefault();
     });
 }); //portfolio fn
 
@@ -159,10 +165,6 @@ $(function () {
 }); // #notice - popup fn
 
 $(function () {
-    $('.polaroid a').click(function (e) {
-        e.preventDefault();
-    });
-
     $('.pp-bg').hide();
     $('.port-list-sub.design .port-thum, .port-list-sub.copy .port-thum').click(function () {
         $('.portfolio-popup-inner').hide();
@@ -189,12 +191,8 @@ $(function () {
         $('.pp-bg').fadeIn();
     });
 
-    $('.pp-bg').click(function () {
+    $('.pp-bg, .pp-button-close').click(function () {
         $('#portfolio-popup').animate({ top: '100%' });
         $('.pp-bg').hide();
-    });
-    $('.pp-button-close').click(function () {
-        $('#portfolio-popup').animate({ top: '100%' });
-        $('.pp-bg').fadeOut();
     });
 }); //#portfolio - popup fn

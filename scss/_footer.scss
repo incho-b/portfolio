@@ -7,7 +7,22 @@
     color: #555;
     line-height: 1.5;
 
+    .copyright {
+        margin: 5px 0;
+    }
+
     span {
         font-weight: bolder;
+    }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+    #footer {
+        width: 100%;
+        bottom: 50px;
+        left: 0;
+        text-align: center;
+        font-size: 0.5rem;
     }
 }

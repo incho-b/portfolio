@@ -84,6 +84,28 @@ body {
 #wrap {
   margin: 0 auto;
   max-width: 1200px;
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+
+#wrap ::-webkit-scrollbar {
+  width: 8px;
+}
+
+#wrap ::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+#wrap ::-webkit-scrollbar-thumb {
+  background: #bbb;
+  border-radius: 4px;
+  -webkit-transition: background 1s;
+  transition: background 1s;
+}
+
+#wrap ::-webkit-scrollbar-thumb:hover {
+  background: #888;
 }
 
 /* RESET */
@@ -172,6 +194,28 @@ body {
 #wrap {
   margin: 0 auto;
   max-width: 1200px;
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+
+#wrap ::-webkit-scrollbar {
+  width: 8px;
+}
+
+#wrap ::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+#wrap ::-webkit-scrollbar-thumb {
+  background: #bbb;
+  border-radius: 4px;
+  -webkit-transition: background 1s;
+  transition: background 1s;
+}
+
+#wrap ::-webkit-scrollbar-thumb:hover {
+  background: #888;
 }
 
 /* #info */
@@ -958,8 +1002,23 @@ body {
   line-height: 1.5;
 }
 
+#footer .copyright {
+  margin: 5px 0;
+}
+
 #footer span {
   font-weight: bolder;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  #footer {
+    width: 100%;
+    bottom: 50px;
+    left: 0;
+    text-align: center;
+    font-size: 0.5rem;
+  }
 }
 
 #portfolio-img-popup {
@@ -1167,6 +1226,28 @@ body {
 #wrap {
   margin: 0 auto;
   max-width: 1200px;
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+
+#wrap ::-webkit-scrollbar {
+  width: 8px;
+}
+
+#wrap ::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+#wrap ::-webkit-scrollbar-thumb {
+  background: #bbb;
+  border-radius: 4px;
+  -webkit-transition: background 1s;
+  transition: background 1s;
+}
+
+#wrap ::-webkit-scrollbar-thumb:hover {
+  background: #888;
 }
 
 .side {
@@ -1325,6 +1406,28 @@ body {
 #wrap {
   margin: 0 auto;
   max-width: 1200px;
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+
+#wrap ::-webkit-scrollbar {
+  width: 8px;
+}
+
+#wrap ::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+#wrap ::-webkit-scrollbar-thumb {
+  background: #bbb;
+  border-radius: 4px;
+  -webkit-transition: background 1s;
+  transition: background 1s;
+}
+
+#wrap ::-webkit-scrollbar-thumb:hover {
+  background: #888;
 }
 
 #notice {
@@ -1454,6 +1557,28 @@ body {
 #wrap {
   margin: 0 auto;
   max-width: 1200px;
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+
+#wrap ::-webkit-scrollbar {
+  width: 8px;
+}
+
+#wrap ::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+#wrap ::-webkit-scrollbar-thumb {
+  background: #bbb;
+  border-radius: 4px;
+  -webkit-transition: background 1s;
+  transition: background 1s;
+}
+
+#wrap ::-webkit-scrollbar-thumb:hover {
+  background: #888;
 }
 
 #portfolio-popup {
@@ -1528,7 +1653,7 @@ body {
 }
 
 #portfolio-popup .portfolio-popup-inner .pp-sub.pp-sub-wrap .pp-sub-inner .pp-title {
-  font-size: 2rem;
+  font-size: 2.3rem;
   font-weight: bolder;
   text-align: center;
   text-transform: uppercase;
@@ -1537,12 +1662,12 @@ body {
 #portfolio-popup .portfolio-popup-inner .pp-sub.pp-sub-wrap .pp-sub-inner .pp-subtitle {
   text-align: center;
   line-height: 2;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: lighter;
+  text-transform: uppercase;
 }
 
 #portfolio-popup .portfolio-popup-inner .pp-sub.pp-sub-wrap .pp-sub-inner .pp-sub-text {
-  font-size: 1rem;
   font-weight: lighter;
   line-height: 1.5;
   margin: 50px 0;
@@ -1558,6 +1683,7 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   line-height: 2;
+  text-transform: uppercase;
 }
 
 #portfolio-popup .portfolio-popup-inner .pp-sub.pp-sub-wrap .pp-sub-inner .pp-subtext .pp-subtext-title {
