@@ -66,26 +66,26 @@ $(function () {
     });
 }); //portfolio fn
 
-$(function () {
-    $('#portfolio-img-popup').hide();
+// $(function () {
+//     $('#portfolio-img-popup').hide();
 
-    $('.port-list .etc').click(function (e) {
-        e.preventDefault();
-        $('#portfolio-img-popup').show();
+//     $('.port-list .etc').click(function (e) {
+//         e.preventDefault();
+//         $('#portfolio-img-popup').show();
 
-        // let $hwatoo = $(this).find('.polaroid');
-        let path = $(this).find('a').attr('href');
+//         // let $hwatoo = $(this).find('.polaroid');
+//         let path = $(this).find('a').attr('href');
 
-        if (path != $('.pop-inner img').attr('src')) {
-            // if ($hwatoo.hasClass('hwatoo')) {
-            $('.pop-inner img').attr({ src: path }).css({ width: '100%' });
-            // }
-        }
-    });
-    $('#portfolio-img-popup .close, .pop-bg').click(function () {
-        $('#portfolio-img-popup').hide();
-    });
-}); //portfolio-img-popup fn
+//         if (path != $('.pop-inner img').attr('src')) {
+//             // if ($hwatoo.hasClass('hwatoo')) {
+//             $('.pop-inner img').attr({ src: path }).css({ width: '100%' });
+//             // }
+//         }
+//     });
+//     $('#portfolio-img-popup .close, .pop-bg').click(function () {
+//         $('#portfolio-img-popup').hide();
+//     });
+// }); //portfolio-img-popup fn
 
 $(function () {
     $('#loading').hide();
@@ -166,7 +166,7 @@ $(function () {
 
 $(function () {
     $('.pp-bg').hide();
-    $('.port-list-sub.design .port-thum, .port-list-sub.copy .port-thum').click(function () {
+    $('.port-list-sub.design .port-thum, .port-list-sub.copy .port-thum, .port-list-sub.etc .port-thum').click(function () {
         $('.portfolio-popup-inner').hide();
 
         if ($(this).parents('.port-list-sub').hasClass('web-fairy')) {
@@ -185,6 +185,12 @@ $(function () {
             $('#portfolio-popup .portfolio-popup-inner.web-hanatour').show();
         } else if ($(this).parents('.port-list-sub').hasClass('web-medicalog')) {
             $('#portfolio-popup .portfolio-popup-inner.web-medicalog').show();
+        } else if ($(this).parents('.port-list-sub').hasClass('de-hwatoo')) {
+            $('#portfolio-popup .portfolio-popup-inner.de-hwatoo').show();
+        } else if ($(this).parents('.port-list-sub').hasClass('de-a-chon')) {
+            $('#portfolio-popup .portfolio-popup-inner.de-a-chon').show();
+        } else if ($(this).parents('.port-list-sub').hasClass('de-yogurt')) {
+            $('#portfolio-popup .portfolio-popup-inner.de-yogurt').show();
         }
 
         $('#portfolio-popup').animate({ top: 0 });
