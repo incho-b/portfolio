@@ -278,14 +278,19 @@ body {
 }
 
 #info .info-bg .namebox {
-  width: 320px;
-  height: 65px;
-  line-height: 65px;
-  text-align: center;
+  width: 400px;
+  height: 100px;
   position: absolute;
   z-index: 10;
   top: calc(50% - 250px);
   left: calc(50% - 180px);
+}
+
+#info .info-bg .namebox p {
+  width: 320px;
+  height: 65px;
+  line-height: 65px;
+  text-align: center;
   font-size: 3rem;
   font-weight: bolder;
   color: #fff;
@@ -293,6 +298,32 @@ body {
           transform: rotate(-15deg);
   background: url(../img/name_bg.png) no-repeat bottom;
   background-size: cover;
+}
+
+#info .info-bg .namebox .namebox-sub {
+  position: absolute;
+  top: 30px;
+  left: 250px;
+  width: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+#info .info-bg .namebox .namebox-sub .namebox-sub-img img {
+  width: 30px;
+}
+
+#info .info-bg .namebox .namebox-sub span {
+  color: #000;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: bolder;
 }
 
 #info .info-bg .info-box {
@@ -844,7 +875,7 @@ body {
   max-width: 800px;
   height: 600px;
   position: relative;
-  top: calc(50% - 500px);
+  top: calc(50% - 300px);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -857,7 +888,7 @@ body {
   height: 60%;
   position: relative;
   position: relative;
-  top: 400px;
+  top: 170px;
   -webkit-transform: rotate(-15deg);
           transform: rotate(-15deg);
   background: #f5989d;
@@ -873,7 +904,7 @@ body {
   height: 60%;
   position: relative;
   position: relative;
-  top: -320px;
+  top: -550px;
   -webkit-transform: rotate(-15deg);
           transform: rotate(-15deg);
   background: #000;
@@ -886,8 +917,7 @@ body {
   height: 60%;
   position: relative;
   background-color: #fff;
-  background-image: url(../img/20grid_bg.png), auto;
-  top: 5vh;
+  top: calc(50% - 500px);
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -901,15 +931,6 @@ body {
   z-index: 5;
   -webkit-box-shadow: 5px 5px 5px #777;
           box-shadow: 5px 5px 5px #777;
-}
-
-#contact .cont-sub .cont-inner hr {
-  width: 1px;
-  height: 90%;
-  background-color: red;
-  position: absolute;
-  top: calc(50% - 45%);
-  left: 20%;
 }
 
 #contact .cont-sub .cont-inner .kakaoqr {
@@ -1377,6 +1398,8 @@ body {
 }
 
 #notice {
+  width: 282px;
+  height: 80px;
   position: fixed;
   top: 20px;
   left: 20px;
@@ -1384,37 +1407,52 @@ body {
   opacity: 1;
   -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
-}
-
-#notice .notice-bg {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-}
-
-#notice .notice-img {
-  position: relative;
+  background: url(../img/indexMemo2.png) top right no-repeat;
 }
 
 #notice .notice-inner {
   position: absolute;
-  top: 140px;
-  left: 80px;
-  width: calc(100% - 160px);
-  height: calc(100% - 200px);
-  color: #1b587c;
-  text-shadow: none;
+  padding: 0 35px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 282px;
+  height: 50px;
+  line-height: 26px;
 }
 
 #notice .notice-button {
   position: absolute;
-  top: 100px;
-  right: 50px;
-  width: 40px;
-  height: 40px;
+  width: 100px;
+  height: 100px;
+  top: -30px;
+  right: -45px;
+}
+
+#notice .notice-button:hover .notice-btn-img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+#notice .notice-button:hover .notice-btn-img svg {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+  fill: #f5989d;
+}
+
+#notice .notice-button .notice-btn-img {
+  position: absolute;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  fill: #98d;
+  top: calc(50% - 18px);
+  left: calc(50% - 18px);
+}
+
+#notice .notice-button .notice-btn-img svg {
+  width: 36px;
+  height: 36px;
+  fill: #79aeb2;
 }
 
 /* RESET */

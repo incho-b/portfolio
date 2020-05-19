@@ -55,20 +55,50 @@
         /* .circle */
 
         .namebox {
-            width: 320px;
-            height: 65px;
-            line-height: 65px;
-            text-align: center;
+            width: 400px;
+            height: 100px;
             position: absolute;
             z-index: 10;
             top: calc(50% - 250px);
             left: calc(50% - 180px);
-            font-size: 3rem;
-            font-weight: bolder;
-            color: #fff;
-            transform: rotate(-15deg);
-            background: url(../img/name_bg.png) no-repeat bottom;
-            background-size: cover;
+
+            // border: 1px solid red;
+            p {
+                width: 320px;
+                height: 65px;
+                line-height: 65px;
+                text-align: center;
+                font-size: 3rem;
+                font-weight: bolder;
+                color: #fff;
+                transform: rotate(-15deg);
+                background: url(../img/name_bg.png) no-repeat bottom;
+                background-size: cover;
+            }
+
+            .namebox-sub {
+                // border: 1px solid blue;
+                position: absolute;
+                top: 30px;
+                left: 250px;
+                width: 150px;
+                display: flex;
+                justify-content: space-around;
+                align-items: flex-end;
+
+                .namebox-sub-img {
+                    img {
+                        width: 30px;
+                    }
+                }
+
+                span {
+                    color: #000;
+                    font-size: 1rem;
+                    text-transform: uppercase;
+                    font-weight: bolder;
+                }
+            }
         }
         /* .namebox */
 

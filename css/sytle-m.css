@@ -280,15 +280,16 @@ iPhone 6~8 Plus : 414 * 736     (1080 * 1920)
     display: none;
   }
   #info .info-bg .circle {
-    top: 10%;
-    left: 20%;
+    top: calc(50% - 450px);
+    left: calc(50% - 350px);
+  }
+  #info .info-bg .namebox .namebox-sub {
+    top: 75px;
+    left: 100px;
   }
   #info .info-bg .info-box {
     max-width: 600px;
     left: calc(50% - 300px);
-  }
-  #info .info-bg .info-box .namebox {
-    left: 50%;
   }
   #info .info-bg .info-box .info-box-inner {
     font-size: 0.9rem;
@@ -409,13 +410,13 @@ iPhone 6~8 Plus : 414 * 736     (1080 * 1920)
     -webkit-transform: scale(0.5);
             transform: scale(0.5);
     top: calc(50% - 300px);
-    left: 30%;
+    left: calc(50% - 230px);
   }
   #info .info-bg .namebox {
-    -webkit-transform: scale(0.6) rotate(-15deg);
-            transform: scale(0.6) rotate(-15deg);
-    top: calc(50% - 170px);
-    left: 40%;
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+    top: calc(50% - 180px);
+    left: calc(50% - 150px);
   }
   #info .info-bg .info-box {
     max-width: 340px;
@@ -553,16 +554,22 @@ iPhone 6~8 Plus : 414 * 736     (1080 * 1920)
     font-size: 0.6rem;
   }
   /* Mobile #portfolio */
+  #contact {
+    height: 75vh;
+  }
   #contact .cont-sub {
     width: 400px;
     height: 300px;
-    top: -50px;
+    top: calc(50% - 180px);
     left: calc(50% - 200px);
   }
   #contact .cont-sub::before {
-    top: 230px;
+    top: 50px;
   }
   #contact .cont-sub::after {
+    top: -308px;
+  }
+  #contact .cont-sub .cont-inner {
     top: -130px;
   }
   #contact .cont-sub .cont-inner .kakaoqr {
