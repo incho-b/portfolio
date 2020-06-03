@@ -202,3 +202,26 @@ $(function () {
         $('.pp-bg').hide();
     });
 }); //#portfolio - popup fn
+
+$(function () {
+    $('.pp-slider-btn--right').click(function () {
+        $(this)
+            // .parent('.pp-slider-btn')
+            .siblings('.pp-sub-img__slide')
+            .animate({ left: '-=100%' }, function () {
+                $(this).append($(this).find('img').first());
+                $(this).css({ left: 0 });
+            });
+    });
+
+    $('.pp-slider-btn--left').click(function () {
+        $(this)
+            // .parent('.pp-slider-btn')
+            .siblings('.pp-sub-img__slide')
+            .animate({ left: '+=100%' }, function () {
+                // $('.pp-sub-img__slide').prepend($('.pp-sub-img__slide img').last());
+                $(this).prepend($(this).find('img').last());
+                $(this).css({ left: 0 });
+            });
+    });
+});
