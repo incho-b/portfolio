@@ -272,7 +272,9 @@
                         }
                         & img {
                             // width: 120%;
-                            transform: scale(1.2);
+                            // transform: scale(1.2);
+                            top: 0;
+                            opacity: 0.5;
                         }
 
                         & .port-th-sub {
