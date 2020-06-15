@@ -88,8 +88,8 @@ $(function () {
 // }); //portfolio-img-popup fn
 
 $(function () {
-    $('#loading').hide();
-    // loadHeart();
+    // $('#loading').hide();
+    loadHeart();
 
     function loadHeart() {
         $('.heart img').css({ opacity: 0 });
