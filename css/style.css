@@ -1597,7 +1597,6 @@ body {
 .portfolio-popup-inner .pp-sub {
   width: 50%;
   height: 100%;
-  overflow: hidden;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: -webkit-box;
@@ -1609,11 +1608,26 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  overflow: hidden;
 }
 
 .portfolio-popup-inner .pp-sub .pp-sub-inner {
   width: 80%;
-  padding: 50px;
+  height: 100%;
+  padding: 55px 50px;
+  overflow-y: scroll;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.portfolio-popup-inner .pp-sub .pp-sub-inner::-webkit-scrollbar {
+  width: 6px;
+  background: none;
+}
+
+.portfolio-popup-inner .pp-sub .pp-sub-inner::-webkit-scrollbar-thumb {
+  background: #eee;
+  border-radius: 3px;
 }
 
 .portfolio-popup-inner .pp-sub .pp-sub-inner .pp-title {

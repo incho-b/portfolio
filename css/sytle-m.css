@@ -227,36 +227,48 @@ body {
     width: 100%;
     height: 45%;
   }
-  #portfolio-popup .portfolio-popup-inner .pp-sub.pp-sub-wrap .pp-sub-inner {
+  #portfolio-popup .portfolio-popup-inner .pp-sub .pp-sub-inner {
     width: 80%;
     padding: 0px;
   }
-  #portfolio-popup .portfolio-popup-inner .pp-sub.pp-sub-wrap .pp-sub-inner .pp-title {
+  #portfolio-popup .portfolio-popup-inner .pp-sub .pp-sub-inner::-webkit-scrollbar {
+    display: block;
+    width: 6px;
+    background: none;
+  }
+  #portfolio-popup .portfolio-popup-inner .pp-sub .pp-sub-inner::-webkit-scrollbar-thumb {
+    background: #eee;
+    border-radius: 3px;
+  }
+  #portfolio-popup .portfolio-popup-inner .pp-sub .pp-sub-inner .pp-title {
     font-size: 1.5rem;
   }
-  #portfolio-popup .portfolio-popup-inner .pp-sub.pp-sub-wrap .pp-sub-inner .pp-subtitle {
+  #portfolio-popup .portfolio-popup-inner .pp-sub .pp-sub-inner .pp-subtitle {
     font-size: 1rem;
   }
-  #portfolio-popup .portfolio-popup-inner .pp-sub.pp-sub-wrap .pp-sub-inner .pp-sub-text {
+  #portfolio-popup .portfolio-popup-inner .pp-sub .pp-sub-inner .pp-sub-text {
     font-size: 0.9rem;
     margin: 20px 0;
   }
-  #portfolio-popup .portfolio-popup-inner .pp-sub.pp-sub-wrap .pp-sub-inner .pp-subtext {
+  #portfolio-popup .portfolio-popup-inner .pp-sub .pp-sub-inner .pp-subtext {
     line-height: 1.5;
+    padding: 0 100px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
-  #portfolio-popup .portfolio-popup-inner .pp-sub.pp-sub-wrap .pp-sub-inner .pp-subtext .pp-subtext-title {
+  #portfolio-popup .portfolio-popup-inner .pp-sub .pp-sub-inner .pp-subtext .pp-subtext-title {
     font-size: 0.9rem;
   }
-  #portfolio-popup .portfolio-popup-inner .pp-sub.pp-sub-wrap .pp-sub-inner .pp-subtext .pp-subtext-sub {
+  #portfolio-popup .portfolio-popup-inner .pp-sub .pp-sub-inner .pp-subtext .pp-subtext-sub {
     font-size: 0.8rem;
   }
-  #portfolio-popup .portfolio-popup-inner .pp-sub.pp-sub-wrap .pp-sub-inner .pp-button {
+  #portfolio-popup .portfolio-popup-inner .pp-sub .pp-sub-inner .pp-button {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
-  #portfolio-popup .portfolio-popup-inner .pp-sub.pp-sub-wrap .pp-sub-inner .pp-button .pp-button-view {
-    margin: 30px 10px 0;
+  #portfolio-popup .portfolio-popup-inner .pp-sub .pp-sub-inner .pp-button .pp-button-view {
+    margin: 30px 50px 0;
   }
 }
 
