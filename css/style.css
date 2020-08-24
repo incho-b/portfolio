@@ -1660,6 +1660,25 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.portfolio-popup-inner .pp-sub .pp-sub-img__slide {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 300%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.portfolio-popup-inner .pp-sub img {
+  width: 100%;
 }
 
 .portfolio-popup-inner .pp-sub .pp-sub-inner {
@@ -1675,6 +1694,11 @@ body {
   display: block;
   width: 6px;
   background: none;
+}
+
+.portfolio-popup-inner .pp-sub .pp-sub-inner::-webkit-scrollbar-thumb {
+  background: #eee;
+  border-radius: 3px;
 }
 
 .portfolio-popup-inner .pp-sub .pp-sub-inner .pp-title {
