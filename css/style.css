@@ -1625,11 +1625,6 @@ body {
   background: none;
 }
 
-.portfolio-popup-inner .pp-sub .pp-sub-inner::-webkit-scrollbar-thumb {
-  background: #eee;
-  border-radius: 3px;
-}
-
 .portfolio-popup-inner .pp-sub .pp-sub-inner .pp-title {
   font-size: 2.3rem;
   font-weight: bolder;
