@@ -1660,28 +1660,6 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-<<<<<<< HEAD
-  overflow: hidden;
-=======
-  position: relative;
-}
-
-.portfolio-popup-inner .pp-sub .pp-sub-img__slide {
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 300%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.portfolio-popup-inner .pp-sub img {
-  width: 100%;
->>>>>>> 279d80ef25ea633b8c8cba6df0f6b7bd7d10d5c5
 }
 
 .portfolio-popup-inner .pp-sub .pp-sub-inner {
@@ -1694,6 +1672,7 @@ body {
 }
 
 .portfolio-popup-inner .pp-sub .pp-sub-inner::-webkit-scrollbar {
+  display: block;
   width: 6px;
   background: none;
 }
