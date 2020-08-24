@@ -57,11 +57,13 @@
 
     .notice-inner {
         position: absolute;
-        padding: 0 35px;
+        padding: 10px 60px;
         box-sizing: border-box;
         width: 282px;
         height: 50px;
-        line-height: 26px;
+        line-height: 1.3;
+        font-size: 0.9rem;
+        text-align: right;
     }
 
     .notice-button {
@@ -69,7 +71,7 @@
         width: 100px;
         height: 100px;
         top: -30px;
-        right: -45px;
+        left: -10px;
 
         &:hover {
             .notice-btn-img {

@@ -858,6 +858,24 @@ body {
   font-size: 1rem;
 }
 
+#portfolio .port-inner .port-list .port-list-sub .polaroid.soon .port-thum {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+#portfolio .port-inner .port-list .port-list-sub .polaroid.soon::before {
+  opacity: 0.5;
+}
+
+#portfolio .port-inner .port-list .port-list-sub .polaroid.soon img {
+  top: 0;
+  opacity: 0.5;
+}
+
+#portfolio .port-inner .port-list .port-list-sub .polaroid.soon .port-th-sub {
+  opacity: 1;
+  z-index: 99;
+}
+
 /* #contact */
 #contact {
   max-width: 100vw;
@@ -1396,12 +1414,14 @@ body {
 
 #notice .notice-inner {
   position: absolute;
-  padding: 0 35px;
+  padding: 10px 60px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 282px;
   height: 50px;
-  line-height: 26px;
+  line-height: 1.3;
+  font-size: 0.9rem;
+  text-align: right;
 }
 
 #notice .notice-button {
@@ -1409,7 +1429,7 @@ body {
   width: 100px;
   height: 100px;
   top: -30px;
-  right: -45px;
+  left: -10px;
 }
 
 #notice .notice-button:hover .notice-btn-img {
@@ -1594,6 +1614,38 @@ body {
   z-index: 100;
 }
 
+.portfolio-popup-inner .pp-slider-btn--left {
+  left: 20px;
+}
+
+.portfolio-popup-inner .pp-slider-btn--right {
+  right: 20px;
+}
+
+.portfolio-popup-inner .pp-slider-btn--left,
+.portfolio-popup-inner .pp-slider-btn--right {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 3px solid #f5989d;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #f5989d;
+  font-size: 20px;
+  font-weight: bolder;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 10;
+}
+
 .portfolio-popup-inner .pp-sub {
   width: 50%;
   height: 100%;
@@ -1608,7 +1660,28 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+<<<<<<< HEAD
   overflow: hidden;
+=======
+  position: relative;
+}
+
+.portfolio-popup-inner .pp-sub .pp-sub-img__slide {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 300%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.portfolio-popup-inner .pp-sub img {
+  width: 100%;
+>>>>>>> 279d80ef25ea633b8c8cba6df0f6b7bd7d10d5c5
 }
 
 .portfolio-popup-inner .pp-sub .pp-sub-inner {
@@ -1730,10 +1803,6 @@ body {
 .portfolio-popup-inner .pp-sub .pp-sub-inner .pp-button .pp-button-view:hover {
   background: skyblue;
   color: #fff;
-}
-
-.portfolio-popup-inner .pp-sub.pp-sub-img img {
-  width: 100%;
 }
 
 .portfolio-popup-inner .pp-button-close svg {

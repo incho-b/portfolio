@@ -34,6 +34,66 @@
     position: relative;
     z-index: 100;
 
+    .pp-slider-btn--left {
+        left: 20px;
+    }
+    .pp-slider-btn--right {
+        right: 20px;
+    }
+
+    .pp-slider-btn--left,
+    .pp-slider-btn--right {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        // background: #fff;
+        border-radius: 50%;
+        border: 3px solid $hotpink;
+        box-sizing: border-box;
+        // position: absolute;
+        color: $hotpink;
+        font-size: 20px;
+        font-weight: bolder;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+    }
+    // .pp-slider-btn {
+    //     // width: calc(70vw - 50%);
+    //     width: 100%;
+    //     height: 30px;
+    //     padding: 0 20px;
+    //     position: absolute;
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: space-between;
+    //     box-sizing: border-box;
+    //     z-index: 100;
+    //     cursor: $nomal;
+
+    //     div {
+    //         width: 30px;
+    //         height: 30px;
+    //         // background: #fff;
+    //         border-radius: 50%;
+    //         border: 3px solid $hotpink;
+    //         box-sizing: border-box;
+    //         // position: absolute;
+    //         color: $hotpink;
+    //         font-size: 20px;
+    //         font-weight: bolder;
+    //         display: flex;
+    //         justify-content: center;
+    //         align-items: center;
+    //     }
+
+    //     &--left {
+    //     }
+    //     &--right {
+    //     }
+    // }
+
     .pp-sub {
         width: 50%;
         height: 100%;
@@ -41,7 +101,24 @@
         display: flex;
         align-items: center;
         justify-content: center;
+<<<<<<< HEAD
         overflow: hidden;
+=======
+        position: relative;
+
+        .pp-sub-img__slide {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 300%;
+            // height: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        img {
+            width: 100%;
+        }
+>>>>>>> 279d80ef25ea633b8c8cba6df0f6b7bd7d10d5c5
 
         .pp-sub-inner {
             width: 80%;
@@ -157,9 +234,6 @@
         //.pp-sub-inner
 
         &.pp-sub-img {
-            img {
-                width: 100%;
-            }
         }
         //.pp-sub-img
 
